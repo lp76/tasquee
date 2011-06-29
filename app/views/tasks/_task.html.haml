@@ -1,0 +1,28 @@
+%p
+  %strong= t(:user) + ":"
+  = @task.user.name
+%p
+  %strong= t(:customer) + ":"
+  = @task.customer.name
+%p
+  %strong= t(:description) + ":"
+  = @task.description
+%p
+  %strong= t(:due) + ":"
+  = l @task.due
+%p
+  %strong= t(:period) + ":"
+  = t @task.period
+%p
+  %strong= t(:priority) + ":"
+  = t @task.priority
+%p
+  %strong= t(:status) + ":"
+  = t @task.status
+
+%div{:style => "display:inline;"}
+  = edit_button_link_to t(:edit), edit_task_path(@task)
+
+%div{:style => "display:inline;"}
+  = trash_negative_button_link_to t(:destroy), task, :confirm => t(:are_you_sure),
+    :method => :delete, :remote => true

@@ -1,0 +1,20 @@
+it:
+  user: Utente
+  users: Utenti
+  admin: Admin
+  name: Nome
+  username: Username
+  password: Password
+  password_confirmation: Conferma Password
+  email: Email
+  role: Ruolo
+  new_user: Nuovo Utente
+  edit_user: Modifica Utente
+  user_details: Profilo Utente
+  show_in_calendar: Mostra nel calendario
+  successfully_created_user: Utente inserito correttamente.
+  successfully_updated_user: Utente modificato correttamente.
+  "yes": 'Si'
+  "no": 'No'
+  "true": 'Si'
+  "false": 'No'

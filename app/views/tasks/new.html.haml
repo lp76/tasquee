@@ -1,0 +1,7 @@
+- title "Tasquee::" + t(:tasks), false
+
+%h1= t :new_task
+
+= render 'form'
+
+%p= button_link_to t(:back_to_list), tasks_path

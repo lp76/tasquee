@@ -1,0 +1,13 @@
+%table
+  %tr
+    %th{:rowspan => 2}
+      = link_to t(:today)
+    - for date in @week
+      %th{:colspan => 2}= l date, :format => :calendar
+  %tr
+    - 1.upto(7) do
+      %th AM
+      %th PM
+  - for user in @users
+    %tr
+      = display_user_week(user, @week)

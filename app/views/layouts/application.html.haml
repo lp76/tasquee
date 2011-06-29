@@ -1,0 +1,37 @@
+!!!
+%html
+
+  %head
+    %title
+      = yield(:title) || "Untitled"
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag "application", "jquery-ui"
+    = css3buttons_stylesheets :include_reset => false
+    = javascript_include_tag :defaults
+    = javascript_include_tag "jquery.ui.datepicker-it"
+    = csrf_meta_tag
+    = yield(:head)
+
+  %body
+    #header
+      #menu
+        = button_group do
+          = primary_home_button_link_to t(:home), events_path
+          = button_link_to t(:tasks), tasks_path
+          = button_link_to t(:appointments), appointments_path
+          = button_link_to t(:users), users_path
+          = button_link_to t(:customers), customers_path
+      #user_menu
+        = t(:user)
+        \ :
+        = link_to current_user.name, edit_user_path(current_user)
+        = button_link_to t(:logout), logout_path
+      .clear
+    #container
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+
+      - if show_title?
+        %h1= yield(:title)
+
+      = yield

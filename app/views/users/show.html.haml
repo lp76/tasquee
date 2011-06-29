@@ -1,0 +1,21 @@
+- title "Tasquee::" + t(:users), false
+
+%h1= t :user_details
+
+%p
+  %strong= t(:name) + ":"
+  = @user.name
+%p
+  %strong= t(:username) + ":"
+  = @user.username
+%p
+  %strong= t(:email) + ":"
+  = @user.email
+%p
+  %strong= t(:admin) + ":"
+  = t @user.admin?.to_s
+%p
+  %strong= t(:show_in_calendar) + ":"
+  = t @user.show_in_calendar?.to_s
+%p
+  = button_link_to t(:back_to_list), users_path

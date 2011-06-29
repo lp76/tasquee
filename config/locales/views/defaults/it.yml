@@ -1,0 +1,15 @@
+it:
+  calendar: Calendario
+  show: Mostra
+  edit: Modifica
+  destroy: Cancella
+  are_you_sure: Sei sicuro?
+  view_all: Visualizza Tutti
+  back_to_list: Indietro
+  today: Oggi
+  home: Home
+  tasks: Tasks
+  logout: Esci
+  access_denied: Accesso Negato
+  invalid_login_or_password: Login o Password errata
+  logged_out: Utente disconnesso

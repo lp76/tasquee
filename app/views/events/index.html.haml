@@ -1,0 +1,15 @@
+- title "Tasquee::Home Page", false
+
+#calendar
+  %h2#week
+    = link_to "<<", :week => (@date.beginning_of_month-1).strftime("%Y-%m-01")
+    = link_to "<", :week => (@date.beginning_of_week-1)
+    = l @date.beginning_of_week, :format => :short
+    \-
+    = l @date.end_of_week, :format => :short
+    = link_to ">", :week => (@date.end_of_week+1)
+    = link_to ">>", :week => (@date.end_of_month+1).strftime("%Y-%m-01")
+  = render 'calendar'
+#show_event_dialog{:style => "display:none"}
+  #show_event
+#clear

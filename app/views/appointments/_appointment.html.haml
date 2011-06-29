@@ -1,0 +1,27 @@
+%p
+  %strong= t(:user) + ":"
+  = @appointment.user.name
+%p
+  %strong= t(:customer) + ":"
+  = @appointment.customer.name
+%p
+  %strong= t(:due) + ":"
+  = l @appointment.due
+%p
+  %strong= t(:period) + ":"
+  = t @appointment.period
+%p
+  %strong= t(:status) + ":"
+  = t @appointment.status
+%p
+  %strong= t(:description) + ":"
+  = @appointment.description
+%p
+  %strong= t(:notes) + ":"
+  = @appointment.notes
+
+%div{:style => "display:inline"}
+  = edit_button_link_to t(:edit), edit_appointment_path(@appointment)
+%div{:style => "display:inline"}
+  = trash_negative_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure),
+    :method => :delete, :remote => true

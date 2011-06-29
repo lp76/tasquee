@@ -1,0 +1,19 @@
+- title "Tasquee::" + t(:customer), false
+
+%h1= t(:customer_details)
+
+%p
+  %strong= t(:name) + ":"
+  = @customer.name
+%p
+  %strong= t(:address) + ":"
+  = @customer.address
+%p
+  %strong= t(:phone) + ":"
+  = @customer.phone
+%p
+  %strong= t(:email) + ":"
+  = @customer.email
+
+%p
+  = button_link_to t(:back_to_list), customers_path

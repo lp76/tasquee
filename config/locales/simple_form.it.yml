@@ -1,0 +1,32 @@
+it:
+  simple_form:
+    labels:
+      appointment:
+       user: Utente
+       customer: Cliente
+       due: Data
+       period: Periodo
+       description: Descrizione
+       notes: Note
+       status: Stato
+      task:
+        user: Utente
+        customer: Cliente
+        due: Scadenza
+        period: Periodo
+        priority: Priorità
+        description: Descrizione
+        notes: Note
+        status: Stato
+      user:
+        name: Nome
+        username: Username
+        email: Email
+        password: Password
+        password_confirmation: Conferma Password
+        show_in_calendar: Mostra nel calendario
+      customer:
+        name: Nome
+        address: Indirizzo
+        phone: Telefono
+        email: Email

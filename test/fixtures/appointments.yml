@@ -1,0 +1,17 @@
+one:
+  user_id: 1
+  customer_id: 1
+  due: 2011-06-28
+  period: MyString
+  description: MyText
+  notes: MyText
+  status: MyString
+
+two:
+  user_id: 1
+  customer_id: 1
+  due: 2011-06-28
+  period: MyString
+  description: MyText
+  notes: MyText
+  status: MyString

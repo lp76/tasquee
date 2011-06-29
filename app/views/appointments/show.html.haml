@@ -1,0 +1,28 @@
+- title "Tasquee::" + t(:appointments), false
+
+%h1= t :appointment_details
+
+%p
+  %strong= t(:user) + ":"
+  = @appointment.user.name
+%p
+  %strong= t(:customer) + ":"
+  = @appointment.customer.name
+%p
+  %strong= t(:due) +":"
+  = l @appointment.due
+%p
+  %strong= t(:period) + ":"
+  = t @appointment.period
+%p
+  %strong= t(:description) + ":"
+  = @appointment.description
+%p
+  %strong= t(:notes) + ":"
+  = @appointment.notes
+%p
+  %strong= t(:status) + ":"
+  = t @appointment.status
+
+%p
+  = button_link_to t(:back_to_list), appointments_path

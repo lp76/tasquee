@@ -1,0 +1,10 @@
+it:
+  customer: Cliente
+  customers: Clienti
+  name: Nome
+  address: Indirizzo
+  phone: Telefono
+  email: Email
+  new_customer: Nuovo Cliente
+  edit_customer: Modifica Cliente
+  customer_details: Dettagli Cliente

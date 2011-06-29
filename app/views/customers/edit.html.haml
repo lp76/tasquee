@@ -1,0 +1,8 @@
+- title "Tasquee::" + t(:customers), false
+
+%h1= t(:edit_customer)
+
+= render 'form'
+
+%p
+  = button_link_to t(:back_to_list), customers_path

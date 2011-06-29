@@ -1,0 +1,17 @@
+it:
+  task: Task
+  tasks: Tasks
+  customer: Cliente
+  description: Descrizione
+  priority: Priorità
+  status: Stato
+  due: Scadenza
+  all_tasks: Tutti
+  active: Attivi
+  pending: In Sospeso
+  completed: Completati
+  task_details: Dettagli Task
+  new_task: Nuovo Task
+  edit_task: Modifica Task
+  successfully_created_task: Task inserito correttamente.
+  successfully_updated_task: Task modificato correttamente.

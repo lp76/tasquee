@@ -1,0 +1,28 @@
+- title "Tasquee::" + t(:tasks), false
+
+%h1= t :task_details
+
+%p
+  %strong= t(:user) + ":"
+  = @task.user.name
+%p
+  %strong= t(:customer) + ":"
+  = @task.customer.name
+%p
+  %strong= t(:due) + ":"
+  = l @task.due
+%p
+  %strong= t(:description) + ":"
+  = @task.description
+%p
+  %strong= t(:priority) + ":"
+  = t @task.priority
+%p
+  %strong= t(:status) + ":"
+  = t @task.status
+%p
+  %strong= t(:period) + ":"
+  = t @task.period
+
+%p
+  = button_link_to t(:back_to_list), tasks_path

@@ -1,0 +1,8 @@
+- title "Tasquee::Log in", false
+
+%h1 Login
+
+= simple_form_for sessions_path, :url => "/sessions" do |f|
+  = f.input :login, :input_html => { :size => 20, :name => 'login', :id => 'login' }
+  = f.input :password, :input_html => { :size => 20, :name => 'password', :id => 'password' }
+  = button_submit_tag "Log in"
