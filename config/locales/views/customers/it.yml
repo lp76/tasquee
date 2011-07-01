@@ -8,3 +8,6 @@ it:
   new_customer: Nuovo Cliente
   edit_customer: Modifica Cliente
   customer_details: Dettagli Cliente
+  successfully_created_customer: Cliente inserito correttamente.
+  successfully_updated_customer: Cliente modificato correttamente.
+  successfully_destroyed_customer: Cliente eliminato correttamente.
