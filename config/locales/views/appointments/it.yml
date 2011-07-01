@@ -10,3 +10,4 @@ it:
   appointment_details: Dettagli Appuntamento
   successfully_created_appointment: Appuntamento inserito correttamente.
   successfully_updated_appointment: Appuntamento modificato correttamente.
+  successfully_destroyed_appointment: Appuntamento cancellato correttamente.

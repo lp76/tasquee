@@ -39,6 +39,6 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
-    redirect_to appointments_url, :notice => "Successfully destroyed appointment."
+    redirect_to appointments_url, :notice => t(:successfully_destroyed_appointment)
   end
 end
