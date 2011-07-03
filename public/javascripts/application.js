@@ -8,6 +8,34 @@ $(function() {
     $(this).closest('tr').fadeOut();
   });
 
+  $('#show_all_tasks').click(function() {
+    $('#active_tasks').hide();
+    $('#completed_tasks').hide();
+    $('#pending_tasks').hide();
+    $('#all_tasks').show();
+  });
+
+  $('#show_active_tasks').click(function() {
+    $('#all_tasks').hide();
+    $('#completed_tasks').hide();
+    $('#pending_tasks').hide();
+    $('#active_tasks').show();
+  });
+
+  $('#show_pending_tasks').click(function() {
+    $('#all_tasks').hide();
+    $('#active_tasks').hide();
+    $('#completed_tasks').hide();
+    $('#pending_tasks').show();
+  });
+
+  $('#show_completed_tasks').click(function() {
+    $('#all_tasks').hide();
+    $('#active_tasks').hide();
+    $('#pending_tasks').hide();
+    $('#completed_tasks').show();
+  });
+
   $('a.remote_link').live('mouseover', function() {
     $(this).click();
   });
