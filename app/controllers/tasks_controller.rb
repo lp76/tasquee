@@ -41,7 +41,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url, :notice => "Successfully destroyed task." }
+      format.html { redirect_to tasks_url, :notice => t(:successfully_destroyed_task) }
       format.js
     end
   end
