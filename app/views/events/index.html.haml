@@ -15,7 +15,7 @@
 #clear
 
 #create_event{:style => "display:none"}
-  = simple_form_for @appointment, {:url => events_path, :remote => true} do |f|
+  = simple_form_for @appointment, {:remote => true} do |f|
     = f.association :user, :collection => User.in_calendar
     = f.association :customer
     = f.input :due, :as => :string, :input_html => {:size => 10}

@@ -17,9 +17,15 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(params[:appointment])
     if @appointment.save
-      redirect_to appointments_url, :notice => t(:successfully_created_appointment)
+      respond_to do |format|
+        format.html {redirect_to appointments_url, :notice => t(:successfully_created_appointment)}
+        format.js
+      end
     else
-      render :action => 'new'
+      respond_to do |format|
+        format.html {render :action => 'new'}
+        format.js
+      end
     end
   end
 
@@ -39,6 +45,10 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
-    redirect_to appointments_url, :notice => t(:successfully_destroyed_appointment)
+
+    respond_to do |format|
+      format.html {redirect_to appointments_url, :notice => t(:successfully_destroyed_appointment)}
+      format.js
+    end
   end
 end

@@ -37,6 +37,8 @@ $(function() {
     e.stopPropagation();
   });
 
-
+  $('#new_appointment').submit(function() {
+    $('#create_event').dialog('destroy');
+  });
 
 });

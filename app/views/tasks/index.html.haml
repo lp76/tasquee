@@ -2,6 +2,13 @@
 
 %h1= t :tasks
 
+.task_filter
+  - button_group do
+    = button_link_to t(:all_tasks), "#", :id => "show_all_tasks"
+    = button_link_to t(:active), "#", :id => "show_active_tasks"
+    = button_link_to t(:pending), "#", :id => "show_pendig_tasks"
+    = button_link_to t(:completed), "#", :id => "show_completed_tasks"
+
 %table
   %tr
     %th= t :user

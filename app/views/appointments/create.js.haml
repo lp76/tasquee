@@ -1,0 +1,7 @@
+- if @appointment.period == 'All day'
+  $('##{@appointment.user.name}_#{l @appointment.due}_Morning').append('<p class="#{@appointment.id}"> #{link_to @appointment.customer.name, @appointment, :remote => true, :class => "remote_link #{@appointment.id}"}</p>');
+  $('##{@appointment.user.name}_#{l @appointment.due}_Afternoon').append('<p class="#{@appointment.id}"> #{link_to @appointment.customer.name, @appointment, :remote => true, :class => "remote_link #{@appointment.id}"}</p>');
+- else
+  $('##{@appointment.user.name}_#{l @appointment.due}_#{@appointment.period}').append('<p class="#{@appointment.id}"> #{link_to @appointment.customer.name, @appointment, :remote => true, :class => "remote_link #{@appointment.id}"}</p>');
+
+$('#new_appointment')[0].reset();
