@@ -9,7 +9,7 @@
       %th= t :priority
       %th= t :status
     - for task in @tasks.select {|t| t.status == 'Active'} do
-      %tr.active
+      %tr{:class => task.status.downcase}
         %td= task.user.name
         %td= task.customer.name
         %td= task.description
