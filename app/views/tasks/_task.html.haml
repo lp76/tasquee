@@ -25,4 +25,4 @@
 
 %div{:style => "display:inline;"}
   = trash_negative_button_link_to t(:destroy), task, :confirm => t(:are_you_sure),
-    :method => :delete, :remote => true
+    :method => :delete, :remote => true, :class => 'delete_action'

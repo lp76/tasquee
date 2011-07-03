@@ -12,4 +12,31 @@ $(function() {
     $(this).click();
   });
 
+  $('#events_calendar > tbody > tr > td').dblclick(function(e) {
+    var info = $(this).attr('id').trim().split('_');
+    var user = info[0];
+    var day = info[1];
+    var period = info[2];
+    var user_id = $('#appointment_user_id option:contains(' + user + ')').val();
+
+    $('#appointment_user_id').val(user_id);
+    $('#appointment_due').val(day);
+    $('#appointment_period').val(period);
+
+    $('#create_event').dialog({
+      modal: true,
+      show: 'slide',
+      width: 600,
+      resizable: false,
+      close: function(event, ui) {
+        $('#new_appointment')[0].reset();
+        $('#create_event').dialog('destroy');
+      }
+    });
+
+    e.stopPropagation();
+  });
+
+
+
 });

@@ -24,4 +24,4 @@
   = edit_button_link_to t(:edit), edit_appointment_path(@appointment)
 %div{:style => "display:inline"}
   = trash_negative_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure),
-    :method => :delete, :remote => true
+    :method => :delete, :remote => true, :class => 'delete_action'

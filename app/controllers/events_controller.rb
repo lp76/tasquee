@@ -5,5 +5,6 @@ class EventsController < ApplicationController
     @date = params[:week] ? Date.parse(params[:week]) : Date.today
     @week = Range.new(@date.beginning_of_week, @date.end_of_week)
     @users = User.in_calendar
+    @appointment = Appointment.new
   end
 end
