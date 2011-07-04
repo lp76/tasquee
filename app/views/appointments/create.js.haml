@@ -4,4 +4,4 @@
 - else
   $('##{@appointment.user.name}_#{l @appointment.due}_#{@appointment.period}').append('<p class="#{@appointment.id}"> #{link_to @appointment.customer.name, @appointment, :remote => true, :class => "remote_link #{@appointment.id}"}</p>');
 
-$('#new_appointment')[0].reset();
+//$('#new_appointment').resetForm();

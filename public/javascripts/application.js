@@ -57,7 +57,7 @@ $(function() {
       width: 600,
       resizable: false,
       close: function(event, ui) {
-        $('#new_appointment')[0].reset();
+        $('#new_appointment').resetForm();
         $('#create_event').dialog('destroy');
       }
     });
@@ -65,8 +65,16 @@ $(function() {
     e.stopPropagation();
   });
 
-  $('#new_appointment').submit(function() {
-    $('#create_event').dialog('destroy');
+  $('#create_event > #new_appointment').validate({
+    submitHandler: function(form) {
+      jQuery(form).ajaxSubmit( {
+        resetForm: true,
+        clearForm: true,
+        dataType: 'script',
+        success: function() {
+          $('#create_event').dialog('destroy');
+        }
+      });
+    }
   });
-
 });
