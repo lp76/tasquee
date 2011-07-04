@@ -31,6 +31,7 @@ class AppointmentsController < ApplicationController
 
   def edit
     @appointment = Appointment.find(params[:id])
+    @appointment.due = I18n.l @appointment.due
   end
 
   def update
