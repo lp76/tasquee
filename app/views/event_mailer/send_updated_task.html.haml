@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+  %body
+    %h1 Tasquee by Sensible Data
+    %p
+      Salve #{@task.user.name}, |
+      %br è stato aggiornato un task a te assegnato:
+    = render 'task_body'

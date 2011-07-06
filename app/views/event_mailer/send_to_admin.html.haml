@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+  %body
+    %h1 Tasquee by Sensible Data
+    %p
+      E' stato completato un task:
+    %p
+      %strong= t(:technician) + ":"
+      = @task.user.name
+    = render 'task_body'

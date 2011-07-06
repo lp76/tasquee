@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
   validates_length_of :password, :minimum => 4, :allow_blank => true
 
   scope :in_calendar, where(:show_in_calendar => true)
+  scope :admins, where(:admin => true)
 
   # login can be either username or email address
   def self.authenticate(login, pass)

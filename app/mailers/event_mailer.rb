@@ -19,10 +19,10 @@ class EventMailer < ActionMailer::Base
          :subject => "[Tasquee] Un task assegnato e' stato cancellato!")
   end
 
-  def send_email_to_admin(task, admin)
+  def send_to_admin(task, admin)
     @task = task
     mail(:to => admin.email,
-          :subject => "[Tasquee] Un task e' stato completato!")
+      :subject => "[Tasquee] Un task e' stato completato!")
   end
 
   def send_appointment(appointment)

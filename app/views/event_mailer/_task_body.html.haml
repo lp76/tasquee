@@ -1,0 +1,18 @@
+%p
+  %strong= t(:customer) + ":"
+  = @task.customer.name
+%p
+  %strong= t(:description) + ":"
+  = simple_format @task.description
+%p
+  %strong= t(:priority) + ":"
+  = t @task.priority
+%p
+  %strong= t(:due) + ":"
+  = l @task.due
+%p
+  %strong= t(:period) + ":"
+  = t @task.period
+%p
+  %strong= t(:status) + ":"
+  = t @task.status
