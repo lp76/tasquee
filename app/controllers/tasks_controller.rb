@@ -25,6 +25,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    @task.due = I18n.l @task.due
   end
 
   def update

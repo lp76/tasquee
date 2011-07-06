@@ -245,12 +245,23 @@ th, tr, td {
 }
 
 #show_event {
+  padding: 18px 18px;
   font-size: 12px;
+  background: none repeat scroll 0 0 #EEF2F7;
+  border: 1px solid #536376;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  width: 400px;
 }
 
 #create_event {
   padding: 18px 0px;
   font-size: 12px;
+  background: none repeat scroll 0 0 #EEF2F7;
+  border: 1px solid #536376;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  width: 600px;
 }
 
 .table_list {

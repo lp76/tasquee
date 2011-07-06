@@ -1,9 +1,5 @@
 :plain
   $('#show_event').html('#{escape_javascript(render @task)}');
-  $('#show_event_dialog').dialog({
-    modal: true,
-    width: 500,
-    show: 'slide',
-    resizable: false,
-    close: function(event, ui) { $('#show_event_dialog').dialog('destroy') }
+  $('#show_event_dialog').lightbox_me({
+    centered: true
   });

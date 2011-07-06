@@ -50,7 +50,7 @@ $(function() {
     $('#appointment_user_id').val(user_id);
     $('#appointment_due').val(day);
     $('#appointment_period').val(period);
-
+/**
     $('#create_event').dialog({
       modal: true,
       show: 'slide',
@@ -61,7 +61,10 @@ $(function() {
         $('#create_event').dialog('destroy');
       }
     });
-
+**/
+    $('#create_event').lightbox_me({
+      centered: true
+    });
     e.stopPropagation();
   });
 
@@ -72,7 +75,7 @@ $(function() {
         clearForm: true,
         dataType: 'script',
         success: function() {
-          $('#create_event').dialog('destroy');
+          $('#create_event').trigger('close');
         }
       });
     }

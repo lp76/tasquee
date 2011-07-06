@@ -16,7 +16,7 @@
 %p
   %strong= t(:priority) + ":"
   = t @task.priority
-%p
+%p{:class => @task.status.downcase}
   %strong= t(:status) + ":"
   = t @task.status
 
