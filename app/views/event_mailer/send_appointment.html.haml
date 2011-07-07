@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+  %body
+    %h1 Tasquee by Sensible Data
+    %p
+      Salve #{@appointment.user.name}, |
+      %br ti è stato assegnato un nuovo appuntamento:
+    = render 'appointment_body'

@@ -1,0 +1,21 @@
+%p
+  %strong= t(:customer) + ":"
+  = @appointment.customer.name
+  %br
+  %address
+    = @appointment.customer.address
+%p
+  %strong= t(:due) + ":"
+  = l @appointment.due
+%p
+  %strong= t(:period) + ":"
+  = t @appointment.period
+%p
+  %strong= t(:status) + ":"
+  = t @appointment.status
+%p
+  %strong= t(:description) + ":"
+  = @appointment.description
+%p
+  %strong= t(:notes) + ":"
+  = @appointment.notes
