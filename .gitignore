@@ -5,3 +5,4 @@ tmp/*
 .DS_Store
 *.pid
 .rvmrc
+config/unicorn.rb
