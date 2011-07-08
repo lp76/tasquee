@@ -2,6 +2,7 @@
 db/*.sqlite3
 config/database.yml
 config/production.yml
+config/database.yml
 log/*.log
 tmp/*
 .DS_Store
