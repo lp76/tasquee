@@ -20,5 +20,5 @@ production:
   encoding: utf8
   database: tasquee
   username: root
-  password: dvml.1SnR
+  password:
   socket: /var/run/mysqld/mysqld.sock
