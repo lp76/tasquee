@@ -54,7 +54,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mocha (0.9.12)
-    mysql2 (0.2.11)
     nifty-generators (0.4.6)
     polyglot (0.3.1)
     rack (1.2.3)
@@ -101,7 +100,6 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mocha
-  mysql2 (~> 0.2.7)
   nifty-generators
   rails (= 3.0.7)
   simple_form

@@ -12,4 +12,4 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "mocha", :group => :test
 gem 'haml-rails'
 gem 'unicorn'
-gem 'mysql2', '~> 0.2.7', :group => :production
+#gem 'mysql2', '~> 0.2.7', :group => :production

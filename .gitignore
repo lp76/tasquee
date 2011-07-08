@@ -1,6 +1,7 @@
 .bundle
 db/*.sqlite3
 config/database.yml
+config/production.yml
 log/*.log
 tmp/*
 .DS_Store
