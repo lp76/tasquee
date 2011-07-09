@@ -18,8 +18,9 @@
         = button_group do
           = search_button_link_to t(:show), user
           = edit_button_link_to t(:edit), edit_user_path(user)
-          = trash_negative_button_link_to t(:destroy), user,
-            :confirm => t(:are_you_sure), :method => :delete
+          - if current_user.name != user.name
+            = trash_negative_button_link_to t(:destroy), user,
+              :confirm => t(:are_you_sure), :method => :delete
 
 %p
   = add_button_link_to t(:new_user), new_user_path
