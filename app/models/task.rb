@@ -18,6 +18,8 @@ class Task < ActiveRecord::Base
   scope :afternoon, where(:period => 'Afternoon')
   scope :all_day, where(:period => 'All day')
 
+  default_scope :order => 'due ASC, priority ASC'
+
   PRIORITY = %w[High Medium Normal]
   STATUS = %w[Active Pending Completed]
   PERIOD = %w[Morning Afternoon All\ day]
