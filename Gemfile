@@ -12,7 +12,6 @@ gem 'annotate'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'mocha', :group => :test
 gem 'haml-rails'
-gem 'rails_config'
 group :production do
   gem 'unicorn'
   gem 'mysql2', '< 0.3', :group => :production
