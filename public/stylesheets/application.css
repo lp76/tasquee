@@ -1,6 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu&v1);
 body {
   background-color: #587498;
-  font-family: Verdana, Helvetica, Arial;
+  font-family: Ubuntu, Helvetica, Arial;
   font-size: 14px;
   margin: 0;
 }
@@ -249,7 +250,7 @@ th, tr, td {
 	margin-bottom: 3px;
 	margin-top: 3px;
 	width: 100px;
-	font-family: Verdana, Helvetica, sans-serif;
+	font-family: Ubuntu, Helvetica, sans-serif;
 	color: #000;
 	font-size: 0.8em;
   text-align: left;
