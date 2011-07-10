@@ -20,4 +20,4 @@
           = edit_button_link_to t(:edit), edit_customer_path(customer)
           = negative_trash_button_link_to t(:destroy), customer, :confirm => t(:are_you_sure), :method => :delete
 
-%p= add_button_link_to t(:new_customer), new_customer_path
+%p= user_button_link_to t(:new_customer), new_customer_path
