@@ -9,31 +9,27 @@ $(function() {
   });
 
   $('#show_all_tasks').click(function() {
-    $('#active_tasks').hide();
-    $('#completed_tasks').hide();
-    $('#pending_tasks').hide();
-    $('#all_tasks').show();
+    $('tr.active').show();
+    $('tr.completed').show();
+    $('tr.pending').show();
   });
 
   $('#show_active_tasks').click(function() {
-    $('#all_tasks').hide();
-    $('#completed_tasks').hide();
-    $('#pending_tasks').hide();
-    $('#active_tasks').show();
+    $('tr.completed').hide();
+    $('tr.pending').hide();
+    $('tr.active').show();
   });
 
   $('#show_pending_tasks').click(function() {
-    $('#all_tasks').hide();
-    $('#active_tasks').hide();
-    $('#completed_tasks').hide();
-    $('#pending_tasks').show();
+    $('tr.active').hide();
+    $('tr.completed').hide();
+    $('tr.pending').show();
   });
 
   $('#show_completed_tasks').click(function() {
-    $('#all_tasks').hide();
-    $('#active_tasks').hide();
-    $('#pending_tasks').hide();
-    $('#completed_tasks').show();
+    $('tr.active').hide();
+    $('tr.pending').hide();
+    $('tr.completed').show();
   });
 
   $('a.remote_link').live('mouseover', function() {

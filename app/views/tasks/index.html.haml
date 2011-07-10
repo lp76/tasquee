@@ -1,17 +1,13 @@
 - title "Tasquee::" + t(:tasks), false
 
-%h1= t :tasks
+%h1.title= t :tasks
 
 .task_filter
-  - button_group do
-    = button_link_to t(:all_tasks), "#", :id => "show_all_tasks"
-    = button_link_to t(:active), "#", :id => "show_active_tasks"
-    = button_link_to t(:pending), "#", :id => "show_pending_tasks"
-    = button_link_to t(:completed), "#", :id => "show_completed_tasks"
+  = button_link_to t(:all_tasks), "#", :id => "show_all_tasks"
+  = button_link_to t(:active), "#", :id => "show_active_tasks"
+  = button_link_to t(:pending), "#", :id => "show_pending_tasks"
+  = button_link_to t(:completed), "#", :id => "show_completed_tasks"
 
 = render 'all_tasks'
-= render 'active_tasks'
-= render 'pending_tasks'
-= render 'completed_tasks'
 
 %p= calendar_button_link_to t(:new_task), new_task_path

@@ -1,5 +1,5 @@
 body {
-  background-color: #4b7399;
+  background-color: #587498;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   margin: 0;
@@ -227,7 +227,7 @@ th, tr, td {
 }
 
 #calendar .today {
-  background-color: #D7F2FF;
+  background-color: #DEE7EF;
 }
 
 #calendar ul {
@@ -277,18 +277,6 @@ th, tr, td {
   padding: 4px 8px;
   padding-bottom: 4px;
   text-align: left;
-}
-
-#pending_tasks {
-  display: none;
-}
-
-#active_tasks {
-  display: none;
-}
-
-#completed_tasks {
-  display: none;
 }
 
 .table_list td {

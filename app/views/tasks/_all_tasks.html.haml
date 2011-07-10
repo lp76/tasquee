@@ -8,18 +8,12 @@
       %th= t :period
       %th= t :priority
       %th= t :status
-    - for task in @tasks
-      %tr{:class => task.status.downcase}
-        %td= task.user.name
-        %td= task.customer.name
-        %td= task.description
-        %td= l task.due
-        %td= t task.period
-        %td= t task.priority
-        %td= t task.status
-        %td
-          = button_group do
-            = search_button_link_to t(:show), task
-            = edit_button_link_to t(:edit), edit_task_path(task)
-            = negative_trash_button_link_to t(:destroy), task, :confirm => t(:are_you_sure),
-              :method => :delete
+    = render 'active_tasks'
+    = render 'pending_tasks'
+    = render 'completed_tasks'
+
+= javascript_tag do
+  $('#show_all_tasks').badger('#{@tasks.count}');
+  $('#show_active_tasks').badger('#{Task.active.count}');
+  $('#show_pending_tasks').badger('#{Task.pending.count}');
+  $('#show_completed_tasks').badger('#{Task.completed.count}');

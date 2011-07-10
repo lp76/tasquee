@@ -3,11 +3,19 @@ module EventsHelper
     html = ""
     html += content_tag :th, "#{user.name}"
     for day in week do
-      html += "<td id='#{user.name}_#{I18n.l day}_Morning'>"
+      html += "<td id='#{user.name}_#{I18n.l day}_Morning'"
+      if day == Date.today
+        html += " class='today'"
+      end
+      html += ">"
       html += load_user_tasks_on_morning(user, day)
       html += load_user_appointments_on_morning(user, day)
       html += "</td>"
-      html += "<td id='#{user.name}_#{I18n.l day}_Afternoon'>"
+      html += "<td id='#{user.name}_#{I18n.l day}_Afternoon'"
+      if day == Date.today
+        html += " class='today'"
+      end
+      html += ">"
       html += load_user_tasks_on_afternoon(user, day)
       html += load_user_appointments_on_afternoon(user, day)
       html += "</td>"
