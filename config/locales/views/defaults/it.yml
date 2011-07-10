@@ -13,3 +13,5 @@ it:
   access_denied: Accesso Negato
   invalid_login_or_password: Login o Password errata
   logged_out: Utente disconnesso
+  settings: Impostazioni
+  calendar_order: Vista calendario

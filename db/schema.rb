@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110628201129) do
+ActiveRecord::Schema.define(:version => 20110710153837) do
 
   create_table "appointments", :force => true do |t|
     t.integer  "user_id"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110628201129) do
     t.string   "name"
     t.boolean  "show_in_calendar"
     t.boolean  "admin"
+    t.integer  "position"
   end
 
 end

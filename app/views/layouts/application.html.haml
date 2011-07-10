@@ -28,10 +28,11 @@
           = button_link_to t(:users), users_path
           = button_link_to t(:customers), customers_path
       #user_menu
-        = t(:user)
-        \ :
-        = link_to current_user.name, edit_user_path(current_user)
-        = button_link_to t(:logout), logout_path
+        = button_group do
+          = primary_user_button_link_to current_user.name, edit_user_path(current_user)
+          = settings_button_link_to t(:settings), settings_path
+        = button_group do
+          = button_link_to t(:logout), logout_path
       .clear
     #container
       - flash.each do |name, msg|

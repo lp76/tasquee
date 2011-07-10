@@ -8,10 +8,13 @@ Tasquee::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login
   match '/' => 'sessions#new'
+  match 'settings' => 'events#settings', :as => :settings
 
   resources :sessions
   resources :users
-  resources :events
+  resources :events do
+    post :sort, on: :collection
+  end
 
   root :to => 'events#index'
 

@@ -209,9 +209,6 @@ th, tr, td {
   font-size: 10px;
 }
 
-#calendar .notmonth {
-  color: #CCC;
-}
 
 #calendar #week {
   margin: 0;
@@ -230,7 +227,8 @@ th, tr, td {
   background-color: #DEE7EF;
 }
 
-#calendar ul {
+#calendar ul,
+#users_list ul {
   margin: 0;
   margin-top: 5px;
   padding: 0;
@@ -242,6 +240,28 @@ th, tr, td {
   padding: 0;
   font-size: 11px;
   text-align: center;
+}
+
+#users_list li {
+	border: 1px solid #DADADA;
+	background-color: #EFEFEF;
+	padding: 3px 5px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	width: 100px;
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #000;
+	font-size: 0.8em;
+  text-align: left;
+}
+
+#users_list li:hover {
+  background-color: #FFF;
+  cursor: move;
+}
+
+.handle:hover {
+  cursor: move;
 }
 
 #show_event {

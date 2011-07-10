@@ -76,4 +76,24 @@ $(function() {
       });
     }
   });
+
+  $('#users').sortable({
+    axis: 'y',
+    dropOnEmpty: false,
+    handle: '.handle',
+    cursor: 'crosshair',
+    items: 'li',
+    opacity: 0.4,
+    update: function() {
+      $.ajax({
+        type: 'post',
+        data: $('#users').sortable('serialize'),
+        dataType: 'script',
+        complete: function(request){
+          $('#users').effect("bounce", {times: 3, distance: 10}, 300);
+        },
+        url: '/events/sort'
+      })
+    }
+  });
 });

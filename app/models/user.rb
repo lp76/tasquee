@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :name, :username, :email, :password, :password_confirmation, :admin, :show_in_calendar
 
+  acts_as_list
+
   has_many :tasks
   has_many :appointments
 
@@ -34,6 +36,8 @@ class User < ActiveRecord::Base
 
   scope :in_calendar, where(:show_in_calendar => true)
   scope :admins, where(:admin => true)
+
+  default_scope :order => 'position ASC'
 
   # login can be either username or email address
   def self.authenticate(login, pass)
