@@ -1,10 +1,10 @@
 .bundle
 .rvmrc
-db/*.sqlite3
-config/database.yml
-config/unicorn.rb
-config/initializers/mailer_settings.rb
-log/*.log
-tmp/*
+/db/*.sqlite3
+/config/database.yml
+/config/unicorn.rb
+/config/initializers/mailer_settings.rb
+/log/*.log
+/tmp/*
 .DS_Store
 *.pid
