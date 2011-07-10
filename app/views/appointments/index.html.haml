@@ -26,4 +26,4 @@
           = edit_button_link_to t(:edit), edit_appointment_path(appointment)
           = negative_trash_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure), :method => :delete
 
-%p= add_button_link_to t(:new_appointment), new_appointment_path
+%p= calendar_button_link_to t(:new_appointment), new_appointment_path
