@@ -49,7 +49,7 @@ $(function() {
     $('#appointment_due').val(day);
     $('#appointment_period').val(period);
 
-    $.uniform.update();
+    $.uniform.update("select");
 
     $('#create_event').lightbox_me({
       centered: true
