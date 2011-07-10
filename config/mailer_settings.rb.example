@@ -1,0 +1,10 @@
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address => "##CHANGEME##",
+  :port => 25,
+  :domain => '##CHANGEME##',
+  :user_name => '##CHANGEME##',
+  :password => '##CHANGEME##',
+  :authentication => :login,
+  :enable_starttls_auto => false 
+}
