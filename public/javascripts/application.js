@@ -1,6 +1,8 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(function() {
+  $("select, input:text, textarea, input:checkbox, input:file").uniform();
+
   $('#task_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#appointment_due').datepicker({dateFormat: 'dd-mm-yy'});
 
@@ -46,18 +48,9 @@ $(function() {
     $('#appointment_user_id').val(user_id);
     $('#appointment_due').val(day);
     $('#appointment_period').val(period);
-/**
-    $('#create_event').dialog({
-      modal: true,
-      show: 'slide',
-      width: 600,
-      resizable: false,
-      close: function(event, ui) {
-        $('#new_appointment').resetForm();
-        $('#create_event').dialog('destroy');
-      }
-    });
-**/
+
+    $.uniform.update();
+
     $('#create_event').lightbox_me({
       centered: true
     });
@@ -96,4 +89,5 @@ $(function() {
       })
     }
   });
+
 });

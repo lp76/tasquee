@@ -4,6 +4,6 @@
   = f.input :description, :input_html => { :rows => 4 }
   = f.input :due, :as => :string, :input_html => { :size => 10 }
   = f.input :period, :collection => Task::PERIOD, :include_blank => false, :label_method => lambda {|p| I18n.t p}
-  = f.input :priority, :collection => Task::PRIORITY, :as => :radio, :label_method => lambda {|p| I18n.t p}
+  = f.input :priority, :collection => Task::PRIORITY, :include_blank => false, :label_method => lambda {|p| I18n.t p}
   = f.input :status, :collection => Task::STATUS, :include_blank => false, :label_method => lambda {|s| I18n.t s}
   = f.button :submit

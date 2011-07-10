@@ -11,6 +11,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @task.priority = "Normal"
     @users_in_calendar = User.in_calendar
   end
 
