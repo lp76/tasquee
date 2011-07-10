@@ -1,6 +1,6 @@
 .bundle
 db/*.sqlite3
-config/mailer_settings.rb
+config/initializers/mailer_settings.rb
 log/*.log
 tmp/*
 .DS_Store
