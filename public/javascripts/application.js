@@ -58,6 +58,9 @@ $(function() {
   });
 
   $('#create_event > #new_appointment').validate({
+    errorPlacement: function(error, element) {
+      error.appendTo(element.closest('div.input'));
+    },
     submitHandler: function(form) {
       jQuery(form).ajaxSubmit( {
         resetForm: true,
