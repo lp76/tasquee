@@ -29,12 +29,12 @@ module EventsHelper
     html = ""
     for task in user.tasks.morning.by_date(day) do
         html += "<p class='#{task.id}'>"
-        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id}"
+        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id} #{task.status.downcase}"
         html += "</p>"
     end
     for task in user.tasks.all_day.by_date(day) do
         html += "<p class='#{task.id}'>"
-        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id}"
+        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id} #{task.status.downcase}"
         html += "</p>"
     end
     html.html_safe
@@ -44,12 +44,12 @@ module EventsHelper
     html = ""
     for task in user.tasks.afternoon.by_date(day) do
         html += "<p class='#{task.id}'>"
-        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id}"
+        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id} #{task.status.downcase}"
         html += "</p>"
     end
     for task in user.tasks.all_day.by_date(day) do
         html += "<p class='#{task.id}'>"
-        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id}"
+        html += link_to "[T]" + task.customer.name, task, :remote => true, :class => "remote_link #{task.id} #{task.status.downcase}"
         html += "</p>"
     end
     html.html_safe

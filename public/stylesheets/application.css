@@ -236,6 +236,10 @@ th, tr, td {
   text-align: center;
 }
 
+#calendar a {
+  text-decoration: none;
+}
+
 #users_list li {
 	border: 1px solid #DADADA;
 	background-color: #EFEFEF;
