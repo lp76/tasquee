@@ -52,7 +52,10 @@ $(function() {
     $.uniform.update("select");
 
     $('#create_event').lightbox_me({
-      centered: true
+      centered: true,
+      onClose: function() {
+        $('label.error').remove();
+      }
     });
     e.stopPropagation();
   });
@@ -92,5 +95,4 @@ $(function() {
       })
     }
   });
-
 });
