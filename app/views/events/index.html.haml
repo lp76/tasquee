@@ -17,12 +17,12 @@
 #create_event{:style => "display:none"}
   %h2= t(:new_appointment)
   %p
-  = simple_form_for @appointment, {:remote => true} do |f|
-    = f.association :user, :collection => User.in_calendar
-    = f.association :customer
-    = f.input :due, :as => :string, :input_html => {:size => 10}
-    = f.input :period, :collection => Appointment::PERIOD, :label_method => lambda {|p| I18n.t p}, :include_blank => false
-    = f.input :status, :collection => Appointment::STATUS, :label_method => lambda {|s| I18n.t s}, :include_blank => false
-    = f.input :description, :input_html => {:rows => 4}
-    = f.input :notes, :input_html => {:rows => 4}
-    = f.button :submit, :class => 'primary'
+    = simple_form_for @appointment, {:remote => true} do |f|
+      = f.association :user, :collection => User.in_calendar
+      = f.association :customer
+      = f.input :due, :as => :string, :input_html => {:size => 10}
+      = f.input :period, :collection => Appointment::PERIOD, :label_method => lambda {|p| I18n.t p}, :include_blank => false
+      = f.input :status, :collection => Appointment::STATUS, :label_method => lambda {|s| I18n.t s}, :include_blank => false
+      = f.input :description, :input_html => {:rows => 4}
+      = f.input :notes, :input_html => {:rows => 4}
+      = f.button :submit, :class => 'primary'

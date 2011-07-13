@@ -281,8 +281,17 @@ th, tr, td {
   width: 650px;
 }
 
+h1, h2 {
+  color: #444444;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin: 15px 0;
+  padding: 10px 0;
+}
+
 #create_event h2 {
-  margin: 2px 10px;
+  margin: 5px 20px;
   padding: 10px 10px;
 }
 
