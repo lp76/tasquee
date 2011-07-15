@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu&v1);
 body {
   background-color: #587498;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Georgia, Ubuntu, Helvetica, Arial;
   font-size: 14px;
   margin: 0;
 }
@@ -179,7 +179,7 @@ th, tr, td {
 
 #calendar td,
 #calendar th {
-  font-family: Ubuntu,arial,helvetica,sans-serif;
+  font-family: Georgia, Ubuntu,arial,helvetica,sans-serif;
   font-size: 12px;
   padding: 6px;
   border: 1px solid #999;
