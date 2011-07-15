@@ -18,11 +18,10 @@ a img {
 
 #container {
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto 10px;
   background: white;
   padding: 20px 40px;
   border: solid 1px black;
-  margin-top: 10px;
   -moz-border-radius:5px;
   -webkit-border-radius:6px;
 }
