@@ -5,6 +5,7 @@
 /config/unicorn.rb
 /config/initializers/mailer_settings.rb
 /log/*.log
+!.gitignore
 /tmp/*
 .DS_Store
 *.pid
