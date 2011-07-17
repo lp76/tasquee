@@ -1,20 +1,23 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu&v1);
 body {
   background-color: #587498;
-  font-family: Georgia, Ubuntu, Helvetica, Arial;
+  font-family: Georgia, Helvetica, sans-serif;
   font-size: 14px;
   margin: 0;
 }
 
 a {
-  color: blue; }
+  color: blue; 
+}
+
 a img {
-  border: none; }
+  border: none;
+}
 
 .clear {
   clear: both;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden; 
+}
 
 #container {
   width: 90%;
@@ -69,20 +72,27 @@ th, tr, td {
   font-size: 12px;
 }
 
+th {
+  background-color: #ddd;
+}
+
 #flash_notice,
 #flash_error,
 #flash_alert {
   padding: 5px 8px;
-  margin: 10px 0; }
+  margin: 10px 0; 
+}
 
 #flash_notice {
   background-color: #ccffcc;
-  border: solid 1px #66cc66; }
+  border: solid 1px #66cc66; 
+}
 
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
-  border: solid 1px #cc6666; }
+  border: solid 1px #cc6666; 
+}
 
 .fieldWithErrors {
   display: inline;
@@ -95,7 +105,9 @@ th, tr, td {
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  font-size: 12px; }
+  font-size: 12px; 
+}
+
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -103,11 +115,16 @@ th, tr, td {
   font-weight: bold;
   font-size: 12px;
   background-color: #cc0000;
-  color: white; }
+  color: white; 
+}
+
 .error_messages p {
-  margin: 8px 10px; }
+  margin: 8px 10px; 
+}
+
 .error_messages ul {
-  margin: 0; }
+  margin: 0; 
+}
 
 #login_box {
   width: 35%;
@@ -147,7 +164,6 @@ th, tr, td {
   margin-left: 2px;
 }
 
-
 .simple_form .error {
   clear: left;
   float: none;
@@ -179,7 +195,7 @@ th, tr, td {
 
 #calendar td,
 #calendar th {
-  font-family: Georgia, Ubuntu,arial,helvetica,sans-serif;
+  font-family: Georgia, Helvetica, sans-serif;
   font-size: 12px;
   padding: 6px;
   border: 1px solid #999;
@@ -200,7 +216,6 @@ th, tr, td {
   font-size: 12px;
   line-height: 1.2em;
 }
-
 
 #calendar #week {
   margin: 0;
@@ -245,7 +260,7 @@ th, tr, td {
 	margin-bottom: 3px;
 	margin-top: 3px;
 	width: 100px;
-	font-family: Ubuntu, Helvetica, sans-serif;
+	font-family: Georgia, Helvetica, sans-serif;
 	color: #000;
 	font-size: 0.8em;
   text-align: left;
