@@ -7,5 +7,6 @@
 /log/*.log
 !.gitignore
 /tmp/*
+!.gitignore
 .DS_Store
 *.pid
