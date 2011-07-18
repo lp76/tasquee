@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
 
   has_many :tasks
   has_many :appointments
+  has_many :holidays
 
   attr_accessor :password
   before_save :prepare_password
