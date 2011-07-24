@@ -19,6 +19,12 @@ a img {
   overflow: hidden; 
 }
 
+#tabs {
+	font-family: Georgia, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
 #container {
   width: 90%;
   margin: 10px auto 10px;

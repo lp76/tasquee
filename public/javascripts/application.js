@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 $(function() {
   $("select, input:text, textarea, input:checkbox, input:file").uniform();
+  $( "#tabs" ).tabs();
 
   $('#task_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#appointment_due').datepicker({dateFormat: 'dd-mm-yy'});

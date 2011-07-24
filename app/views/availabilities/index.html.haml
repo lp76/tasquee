@@ -1,0 +1,47 @@
+- title "Tasquee::Assenze", false
+
+#tabs
+  %ul
+    %li
+      %a{:href => "#tabs-1"}= t(:holidays)
+    %li
+      %a{:href => "#tabs-2"}= t(:absences) 
+
+  #tabs-1
+    %h2= t(:holidays)
+    
+    %table
+      %tr
+        %th= t(:user)
+        %th= t(:start_date)
+        %th= t(:end_date)
+      - for holiday in @holidays
+        %tr
+          %td= holiday.user.name
+          %td= l holiday.start_date
+          %td= l holiday.end_date
+          %td
+            - button_group do
+              = search_button_link_to t(:show), holiday
+              = edit_button_link_to t(:edit), edit_holiday_path(holiday)
+              = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
+  #tabs-2
+    %h2= t(:absences)
+    
+    %table
+      %tr
+        %th= t(:user)
+        %th= t(:day)
+        %th= t(:start_time)
+        %th= t(:end_time)
+      - for absence in @absences
+        %tr
+          %td= absence.user.name
+          %td= absence.day
+          %td= absence.start_time
+          %td= absence.end_time
+          %td
+            - button_group do
+              = search_button_link_to t(:show), absence
+              = edit_button_link_to t(:edit), edit_absence_path(absence)
+              = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete

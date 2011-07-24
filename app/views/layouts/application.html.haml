@@ -29,6 +29,7 @@
           = button_link_to t(:tasks), tasks_path
           = button_link_to t(:customers), customers_path
           = button_link_to t(:users), users_path
+          = button_link_to t(:availability), availabilities_path
       #user_menu
         = button_group do
           = primary_user_button_link_to current_user.name, edit_user_path(current_user)

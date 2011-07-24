@@ -15,6 +15,8 @@ Tasquee::Application.routes.draw do
   end
   
   resources :availabilities
+  resources :holidays
+  resources :absences
   
   root :to => 'events#index'
 
