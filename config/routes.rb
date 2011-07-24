@@ -13,7 +13,9 @@ Tasquee::Application.routes.draw do
   resources :events do
     post :sort, on: :collection
   end
-
+  
+  resources :availabilities
+  
   root :to => 'events#index'
 
   # The priority is based upon order of creation:
