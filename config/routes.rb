@@ -1,8 +1,6 @@
 Tasquee::Application.routes.draw do
   resources :appointments
-
   resources :tasks
-
   resources :customers
 
   match 'logout' => 'sessions#destroy', :as => :logout
