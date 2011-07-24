@@ -1,18 +1,19 @@
 # == Schema Information
 #
-# Table name: holidays
+# Table name: absences
 #
 #  id         :integer         not null, primary key
 #  user_id    :integer
-#  start_date :date
-#  end_date   :date
+#  day        :date
+#  start_time :string(255)
+#  end_time   :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 require 'test_helper'
 
-class HolidayTest < ActiveSupport::TestCase
+class AbsenceTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

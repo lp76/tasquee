@@ -12,6 +12,7 @@
 #  name             :string(255)
 #  show_in_calendar :boolean
 #  admin            :boolean
+#  position         :integer
 #
 
 class User < ActiveRecord::Base
@@ -23,6 +24,7 @@ class User < ActiveRecord::Base
   has_many :tasks
   has_many :appointments
   has_many :holidays
+  has_many :absences
 
   attr_accessor :password
   before_save :prepare_password

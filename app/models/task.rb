@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id          :integer         not null, primary key
+#  user_id     :integer
+#  customer_id :integer
+#  description :text
+#  due         :date
+#  priority    :string(255)
+#  status      :string(255)
+#  period      :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Task < ActiveRecord::Base
   attr_accessible :user_id, :customer_id, :description, :due, :priority, :status, :period
 

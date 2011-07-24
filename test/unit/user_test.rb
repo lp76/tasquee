@@ -12,6 +12,7 @@
 #  name             :string(255)
 #  show_in_calendar :boolean
 #  admin            :boolean
+#  position         :integer
 #
 
 require 'test_helper'

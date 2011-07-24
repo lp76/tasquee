@@ -1,11 +1,12 @@
 # == Schema Information
 #
-# Table name: holidays
+# Table name: absences
 #
 #  id         :integer         not null, primary key
 #  user_id    :integer
-#  start_date :date
-#  end_date   :date
+#  day        :date
+#  start_time :string(255)
+#  end_time   :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
@@ -14,10 +15,12 @@
 
 one:
   user_id: 1
-  start_date: 2011-07-18
-  end_date: 2011-07-18
+  day: 2011-07-24
+  start_time: MyString
+  end_time: MyString
 
 two:
   user_id: 1
-  start_date: 2011-07-18
-  end_date: 2011-07-18
+  day: 2011-07-24
+  start_time: MyString
+  end_time: MyString
