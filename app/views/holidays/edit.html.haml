@@ -1,0 +1,8 @@
+- title "Tasquee::" + t(:holidays), false
+
+%h1= t :edit_holiday
+
+= render 'form'
+
+%p
+  = button_link_to t(:back_to_list), availabilities_path

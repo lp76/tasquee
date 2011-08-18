@@ -1,0 +1,6 @@
+it:
+    holiday_details: "Dettaglio Ferie"
+    new_holiday: "Aggiungi Ferie"
+    successfully_created_holiday: "Ferie inserite correttamente"
+    successfully_updated_holiday: "Ferie aggiornate correttamente"
+    successfully_destroyed_holiday: "Ferie cancellate correttamente"

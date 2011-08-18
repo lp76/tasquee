@@ -1,0 +1,5 @@
+= simple_form_for @holiday do |f|
+  = f.association :user, :collection => @users_in_calendar
+  = f.input :start_date, :as => :string, :input_html => { :size => 10 }
+  = f.input :end_date, :as => :string, :input_html => { :size => 10 }
+  = f.button :submit

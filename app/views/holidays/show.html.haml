@@ -1,0 +1,16 @@
+- title "Tasquee::" + t(:holiday), false
+
+%h1= t(:holiday_details)
+
+%p
+  %strong= t(:user) + ":"
+  = @holiday.user.name
+%p
+  %strong= t(:start_date) + ":"
+  = l @holiday.start_date
+%p
+  %strong= t(:end_date) + ":"
+  = l @holiday.end_date
+
+%p
+  = button_link_to t(:back_to_list), availabilities_path
