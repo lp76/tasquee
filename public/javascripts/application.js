@@ -6,6 +6,8 @@ $(function() {
 
   $('#task_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#appointment_due').datepicker({dateFormat: 'dd-mm-yy'});
+  $('#holiday_start_date').datepicker({dateFormat: 'dd-mm-yy'});
+  $('#holiday_end_date').datepicker({dateFormat: 'dd-mm-yy'});
 
   $('.delete_action').live('ajax:success', function() {
     $(this).closest('tr').fadeOut();

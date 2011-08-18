@@ -30,3 +30,7 @@ it:
         address: Indirizzo
         phone: Telefono
         email: Email
+      holiday:
+        user: Utente
+        start_date: Dal
+        end_date: Al

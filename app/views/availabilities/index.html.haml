@@ -3,13 +3,13 @@
 #tabs
   %ul
     %li
-      %a{:href => "#tabs-1"}= t(:holidays)
+      %a{:href => "#tab1"}= t(:holidays)
     %li
-      %a{:href => "#tabs-2"}= t(:absences) 
+      %a{:href => "#tab2"}= t(:absences) 
 
-  #tabs-1
+  #tab1
     %h2= t(:holidays)
-    
+  
     %table
       %tr
         %th= t(:user)
@@ -21,13 +21,14 @@
           %td= l holiday.start_date
           %td= l holiday.end_date
           %td
-            - button_group do
+            = button_group do
               = search_button_link_to t(:show), holiday
               = edit_button_link_to t(:edit), edit_holiday_path(holiday)
               = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
-  #tabs-2
+    %p= add_button_link_to t(:new_holiday), new_holiday_path
+  #tab2
     %h2= t(:absences)
-    
+  
     %table
       %tr
         %th= t(:user)
@@ -41,7 +42,7 @@
           %td= absence.start_time
           %td= absence.end_time
           %td
-            - button_group do
+            = button_group do
               = search_button_link_to t(:show), absence
               = edit_button_link_to t(:edit), edit_absence_path(absence)
               = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete
