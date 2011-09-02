@@ -5,6 +5,7 @@ it:
   description: Descrizione
   notes: Note
   status: Stato
+  appointment_due: Data
   new_appointment: Nuovo Appuntamento
   edit_appointment: Modifica Appuntamento
   appointment_details: Dettagli Appuntamento
