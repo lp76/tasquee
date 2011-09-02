@@ -28,7 +28,7 @@
     %p= add_button_link_to t(:new_holiday), new_holiday_path
   #tab2
     %h2= t(:absences)
-  
+
     %table
       %tr
         %th= t(:user)
@@ -46,3 +46,4 @@
               = search_button_link_to t(:show), absence
               = edit_button_link_to t(:edit), edit_absence_path(absence)
               = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete
+    %p= add_button_link_to t(:new_absence), new_absence_path
