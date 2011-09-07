@@ -1,49 +1,47 @@
 - title "Tasquee::Assenze", false
 
-#tabs
-  %ul
-    %li
-      %a{:href => "#tab1"}= t(:holidays)
-    %li
-      %a{:href => "#tab2"}= t(:absences) 
+.availabilities_filter
+  = button_link_to t(:holidays), "#", :id => "show_holidays"
+  = button_link_to t(:absences), "#", :id => "show_absences"
 
-  #tab1
-    %h2= t(:holidays)
-  
-    %table
-      %tr
-        %th= t(:user)
-        %th= t(:start_date)
-        %th= t(:end_date)
-      - for holiday in @holidays
-        %tr
-          %td= holiday.user.name
-          %td= l holiday.start_date
-          %td= l holiday.end_date
-          %td
-            = button_group do
-              = search_button_link_to t(:show), holiday
-              = edit_button_link_to t(:edit), edit_holiday_path(holiday)
-              = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
-    %p= add_button_link_to t(:new_holiday), new_holiday_path
-  #tab2
-    %h2= t(:absences)
+#holidays
+  %h2= t(:holidays)
 
-    %table
+  %table
+    %tr
+      %th= t(:user)
+      %th= t(:start_date)
+      %th= t(:end_date)
+    - for holiday in @holidays
       %tr
-        %th= t(:user)
-        %th= t(:day)
-        %th= t(:start_time)
-        %th= t(:end_time)
-      - for absence in @absences
-        %tr
-          %td= absence.user.name
-          %td= absence.day
-          %td= absence.start_time
-          %td= absence.end_time
-          %td
-            = button_group do
-              = search_button_link_to t(:show), absence
-              = edit_button_link_to t(:edit), edit_absence_path(absence)
-              = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete
-    %p= add_button_link_to t(:new_absence), new_absence_path
+        %td= holiday.user.name
+        %td= l holiday.start_date
+        %td= l holiday.end_date
+        %td
+          = button_group do
+            = search_button_link_to t(:show), holiday
+            = edit_button_link_to t(:edit), edit_holiday_path(holiday)
+            = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
+  %p= add_button_link_to t(:new_holiday), new_holiday_path
+
+#absences{:style => "display:none"}
+  %h2= t(:absences)
+
+  %table
+    %tr
+      %th= t(:user)
+      %th= t(:day)
+      %th= t(:start_time)
+      %th= t(:end_time)
+    - for absence in @absences
+      %tr
+        %td= absence.user.name
+        %td= absence.day
+        %td= absence.start_time
+        %td= absence.end_time
+        %td
+          = button_group do
+            = search_button_link_to t(:show), absence
+            = edit_button_link_to t(:edit), edit_absence_path(absence)
+            = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete
+  %p= add_button_link_to t(:new_absence), new_absence_path
