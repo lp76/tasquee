@@ -16,13 +16,7 @@ a img {
 .clear {
   clear: both;
   height: 0;
-  overflow: hidden; 
-}
-
-#tabs {
-	font-family: Georgia, Helvetica, sans-serif;
-	font-size: 14px;
-	margin: 0;
+  overflow: hidden;
 }
 
 #container {
@@ -63,8 +57,8 @@ table {
 }
 
 table p {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -86,7 +80,7 @@ th {
 #flash_error,
 #flash_alert {
   padding: 5px 8px;
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 
 #flash_notice {
@@ -283,7 +277,7 @@ th {
 
 #show_event {
   padding: 18px 18px;
-  font-size: 12px;
+  font-size: 14px;
   background: none repeat scroll 0 0 #EEF2F7;
   border: 1px solid #536376;
   border-radius: 6px 6px 6px 6px;
@@ -293,7 +287,7 @@ th {
 
 #create_event {
   padding: 18px 0px;
-  font-size: 12px;
+  font-size: 14px;
   background: none repeat scroll 0 0 #EEF2F7;
   border: 1px solid #536376;
   border-radius: 6px 6px 6px 6px;
@@ -302,7 +296,7 @@ th {
 }
 
 h1, h2 {
-  color: #444444;
+  color: #9e1700;
   font-size: 1.6em;
   font-weight: 700;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
@@ -354,4 +348,136 @@ h1, h2 {
 .busy {
   background-color: #2E2F2F;
   text-align: center;
+}
+
+/* DataTables style */
+#customers_table, #appointments_table {
+  width: 100%;
+}
+
+.dataTables_wrapper {
+	position: relative;
+  width: 100%;
+	min-height: 302px;
+	clear: both;
+	_height: 302px;
+	zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 40%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_paginate {
+	width: 60%;
+	float: right;
+	text-align: right;
+}
+
+.top, .bottom {
+	padding: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+  min-height: 17px;
+}
+
+.top {
+  margin-bottom: 10px;
+}
+
+.bottom {
+  margin-top: 10px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background: url('../images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../images/sort_desc.png') no-repeat center right;
+}
+
+.sorting {
+	background: url('../images/sort_both.png') no-repeat center right;
+}
+
+.sorting_asc_disabled {
+	background: url('../images/sort_asc_disabled.png') no-repeat center right;
+}
+
+.sorting_desc_disabled {
+	background: url('../images/sort_desc_disabled.png') no-repeat center right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.jpg');
+}
+
+.example_alt_pagination div.dataTables_info {
+	width: 40%;
+}
+
+.paging_full_numbers {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.paging_full_numbers span.paginate_button,
+ 	.paging_full_numbers span.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.paging_full_numbers span.paginate_button {
+	background-color: #ddd;
+}
+
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #ccc;
+}
+
+.paging_full_numbers span.paginate_active {
+	background-color: #99B3FF;
 }

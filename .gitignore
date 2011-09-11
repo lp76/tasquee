@@ -1,5 +1,6 @@
 .bundle
 .rvmrc
+.redcar
 /db/*.sqlite3
 /config/database.yml
 /config/unicorn.rb

@@ -5,7 +5,7 @@
   = button_link_to t(:absences), "#", :id => "show_absences"
 
 #holidays
-  %h2= t(:holidays)
+  %h1= t(:holidays)
 
   %table
     %tr
@@ -19,13 +19,12 @@
         %td= l holiday.end_date
         %td
           = button_group do
-            = search_button_link_to t(:show), holiday
             = edit_button_link_to t(:edit), edit_holiday_path(holiday)
             = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
   %p= add_button_link_to t(:new_holiday), new_holiday_path
 
 #absences{:style => "display:none"}
-  %h2= t(:absences)
+  %h1= t(:absences)
 
   %table
     %tr
@@ -41,7 +40,6 @@
         %td= absence.end_time
         %td
           = button_group do
-            = search_button_link_to t(:show), absence
             = edit_button_link_to t(:edit), edit_absence_path(absence)
             = negative_trash_button_link_to t(:destroy), absence, :confirm => t(:are_you_sure), :method => :delete
   %p= add_button_link_to t(:new_absence), new_absence_path

@@ -2,22 +2,25 @@
 
 %h1= t(:customers)
 
-%table
-  %tr
-    %th= t(:name)
-    %th= t(:address)
-    %th= t(:phone)
-    %th= t(:email)
-  - for customer in @customers
+%table{:id => "customers_table"}
+  %thead
     %tr
-      %td= customer.name
-      %td= customer.address
-      %td= customer.phone
-      %td= customer.email
-      %td
-        - button_group do
-          = search_button_link_to t(:show), customer
-          = edit_button_link_to t(:edit), edit_customer_path(customer)
-          = negative_trash_button_link_to t(:destroy), customer, :confirm => t(:are_you_sure), :method => :delete
+      %th= t(:name)
+      %th= t(:address)
+      %th= t(:phone)
+      %th= t(:email)
+      %th
+  %tbody
+    - for customer in @customers
+      %tr
+        %td= customer.name
+        %td= customer.address
+        %td= customer.phone
+        %td= customer.email
+        %td
+          = button_group do
+            = search_button_link_to t(:show), customer
+            = edit_button_link_to t(:edit), edit_customer_path(customer)
+            = negative_trash_button_link_to t(:destroy), customer, :confirm => t(:are_you_sure), :method => :delete
 
 %p= user_button_link_to t(:new_customer), new_customer_path

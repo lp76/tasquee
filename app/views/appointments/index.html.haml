@@ -2,28 +2,31 @@
 
 %h1= t :appointments
 
-%table
-  %tr
-    %th= t :user
-    %th= t :customer
-    %th= t :due
-    %th= t :period
-    %th= t :description
-    %th= t :notes
-    %th= t :status
-  - for appointment in @appointments
+%table{:id => "appointments_table"}
+  %thead
     %tr
-      %td= appointment.user.name
-      %td= appointment.customer.name
-      %td= l appointment.due
-      %td= t appointment.period
-      %td= t appointment.description
-      %td= appointment.notes
-      %td= t appointment.status
-      %td
-        - button_group do
-          = search_button_link_to t(:show), appointment
-          = edit_button_link_to t(:edit), edit_appointment_path(appointment)
-          = negative_trash_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure), :method => :delete
+      %th= t :user
+      %th= t :customer
+      %th= t :due
+      %th= t :period
+      %th= t :description
+      %th= t :notes
+      %th= t :status
+      %th
+  %tbody
+    - for appointment in @appointments
+      %tr
+        %td= appointment.user.name
+        %td= appointment.customer.name
+        %td= l appointment.due
+        %td= t appointment.period
+        %td= t appointment.description
+        %td= appointment.notes
+        %td= t appointment.status
+        %td
+          = button_group do
+            = search_button_link_to t(:show), appointment
+            = edit_button_link_to t(:edit), edit_appointment_path(appointment)
+            = negative_trash_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure), :method => :delete
 
 %p= calendar_button_link_to t(:new_appointment), new_appointment_path
