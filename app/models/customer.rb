@@ -14,6 +14,8 @@
 class Customer < ActiveRecord::Base
   attr_accessible :name, :address, :phone, :email
 
+  default_scope :order => 'name asc'
+
   has_many :tasks
   has_many :appointments
 
