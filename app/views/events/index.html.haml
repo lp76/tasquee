@@ -9,6 +9,8 @@
     = l @date.end_of_week, :format => :short
     = link_to ">", :week => (@date.end_of_week+1)
     = link_to ">>", :week => (@date.end_of_month+1).strftime("%Y-%m-01")
+    %br
+    = @date.year
   = render 'calendar'
 
 #show_event_dialog{:style => "display:none"}
