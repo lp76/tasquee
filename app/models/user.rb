@@ -56,6 +56,14 @@ class User < ActiveRecord::Base
     self.admin ? :yes : :no
   end
 
+  def in_holiday?(date)
+    self.holidays.find(:all, :conditions => ["start_date <= ? AND end_date >= ?", date, date]).empty? ? false : true
+  end
+
+  def absent?(date)
+    self.absences.find(:all, :conditions => ["day = ?", date]).empty? ? false : true
+  end
+
   private
 
   def prepare_password
