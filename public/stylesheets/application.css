@@ -1,7 +1,7 @@
 body {
   background-color: #587498;
-  font-family: Georgia, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: Palatino, Georgia, Helvetica, sans-serif;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -125,7 +125,7 @@ th {
 .error_messages ul {
   margin: 0; 
 }
-
+/*
 #login_box {
   width: 35%;
   margin: 0 auto;
@@ -133,6 +133,23 @@ th {
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:6px;
+}
+*/
+
+#login_box {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px 20px;
+  background-color: #FFF;
+  border: solid 1px black;
   -moz-border-radius:5px;
   -webkit-border-radius:6px;
 }
@@ -195,7 +212,7 @@ th {
 
 #calendar td,
 #calendar th {
-  font-family: Georgia, Helvetica, sans-serif;
+  font-family: Palatino, Georgia, Helvetica, sans-serif;
   font-size: 12px;
   padding: 6px;
   border: 1px solid #999;
@@ -260,7 +277,7 @@ th {
 	margin-bottom: 3px;
 	margin-top: 3px;
 	width: 100px;
-	font-family: Georgia, Helvetica, sans-serif;
+	font-family: Palatino, Georgia, Helvetica, sans-serif;
 	color: #000;
 	font-size: 0.8em;
   text-align: left;
