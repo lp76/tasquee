@@ -36,6 +36,7 @@
         = button_group do
           = primary_user_button_link_to current_user.name, edit_user_path(current_user)
           = settings_button_link_to t(:settings), settings_path
+          = button_link_to t(:help), "#"
         = button_group do
           = button_link_to t(:logout), logout_path
       .clear
