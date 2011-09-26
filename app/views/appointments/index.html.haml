@@ -10,7 +10,6 @@
       %th= t :due
       %th= t :period
       %th= t :description
-      %th= t :notes
       %th= t :status
       %th
   %tbody
@@ -21,9 +20,9 @@
         %td= l appointment.due
         %td= t appointment.period
         %td= t appointment.description
-        %td= appointment.notes
-        %td= t appointment.status
-        %td
+        %td.center
+          %span.label{:class => "#{appointment.status.to_s.downcase}"}= t appointment.status
+        %td.center
           = button_group do
             = search_button_link_to t(:show), appointment
             = edit_button_link_to t(:edit), edit_appointment_path(appointment)

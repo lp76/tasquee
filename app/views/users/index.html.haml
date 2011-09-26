@@ -2,12 +2,13 @@
 
 %h1= t(:users)
 
-%table
+%table.table_list
   %tr
     %th= t(:name)
     %th= t(:username)
     %th= t(:email)
     %th= t(:admin)
+    %th
   - for user in @users
     %tr
       %td= user.name
