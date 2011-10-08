@@ -1,7 +1,7 @@
 body {
   background-color: #587498;
   font-family: Palatino, Georgia, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -73,7 +73,7 @@ table, th, tr, td {
 
 th, tr, td {
   padding: 4px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 th {
@@ -317,10 +317,17 @@ th {
 }
 
 h1, h2 {
+  font-family: Yanone Kaffeesatz;
   color: #9e1700;
+  /*
   font-size: 1.6em;
+  */
+  text-shadow: 1px 1px 1px white;
+  font-weight: normal;
+  /*
   font-weight: 700;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  */
   margin: 15px 0;
   padding: 10px 0;
 }
