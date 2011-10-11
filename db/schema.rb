@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110724122435) do
+ActiveRecord::Schema.define(:version => 20111011121301) do
 
   create_table "absences", :force => true do |t|
     t.integer  "user_id"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20110724122435) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "absences", ["user_id"], :name => "index_absences_on_user_id"
 
   create_table "appointments", :force => true do |t|
     t.integer  "user_id"
@@ -32,6 +34,9 @@ ActiveRecord::Schema.define(:version => 20110724122435) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "appointments", ["customer_id"], :name => "index_appointments_on_customer_id"
+  add_index "appointments", ["user_id"], :name => "index_appointments_on_user_id"
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -50,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20110724122435) do
     t.datetime "updated_at"
   end
 
+  add_index "holidays", ["user_id"], :name => "index_holidays_on_user_id"
+
   create_table "tasks", :force => true do |t|
     t.integer  "user_id"
     t.integer  "customer_id"
@@ -61,6 +68,9 @@ ActiveRecord::Schema.define(:version => 20110724122435) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "tasks", ["customer_id"], :name => "index_tasks_on_customer_id"
+  add_index "tasks", ["user_id"], :name => "index_tasks_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"
