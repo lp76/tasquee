@@ -1,7 +1,7 @@
 %table{:id => 'events_calendar'}
   %tr
     %th{:rowspan => 2}
-      = link_to t(:today)
+      %a.iconic.home.tip{:href => "#{events_path}", :title => "#{t :today}"}
     - for date in @week
       %th{:colspan => 2}= l date, :format => :calendar
   %tr
