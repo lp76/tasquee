@@ -13,6 +13,18 @@
     = @date.year
   = render 'calendar'
 
+%ul.tabs(data-tabs="tabs")
+  %li.active
+    %a{:href => "#info"} Info
+  %li
+    %a{:href => "#alarm"} Alarm
+#my-tab-content.tab-content
+  #info
+    %p
+      Info
+  #alarm
+    %p Allarmi
+
 #show_event_dialog{:style => "display:none"}
   #show_event
 #clear

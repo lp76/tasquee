@@ -3,6 +3,8 @@
 $(function() {
   $("select, input:text, textarea, input:checkbox, input:file").uniform();
 
+  $(".tip").tipTip();
+
   $('#task_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#appointment_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#holiday_start_date').datepicker({dateFormat: 'dd-mm-yy'});

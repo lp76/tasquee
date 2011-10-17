@@ -1,19 +1,19 @@
 class HolidaysController < ApplicationController
   before_filter :login_required
-    
+
   def index
     redirect_to availabilities_path
   end
-  
+
   def new
     @users_in_calendar = User.in_calendar
     @holiday = Holiday.new
   end
-  
+
   def show
     @holiday = Holiday.find(params[:id])
   end
-  
+
   def create
     @holiday = Holiday.new(params[:holiday])
     if @holiday.save
@@ -43,5 +43,5 @@ class HolidaysController < ApplicationController
     @holiday.destroy
     redirect_to availabilities_url, :notice => t(:successfully_destroyed_holiday)
   end
-  
+
 end
