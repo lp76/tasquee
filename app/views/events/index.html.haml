@@ -1,5 +1,7 @@
 - title "Tasquee::Home Page", false
 
+%h2.ribbon.flag Calendario
+
 #calendar
   %h2#week
     = link_to "<<", :week => (@date.beginning_of_month-1).strftime("%Y-%m-01")
@@ -13,17 +15,15 @@
     = @date.year
   = render 'calendar'
 
-%ul.tabs(data-tabs="tabs")
-  %li.active
-    %a{:href => "#info"} Info
-  %li
-    %a{:href => "#alarm"} Allarmi
-#my-tab-content.tab-content
-  #info
-    %p
-      Info
-  #alarm
-    %p Allarmi
+#notice
+  %h2.ribbon.flag Task in scadenza
+
+  %p
+    %table
+      %tr
+        %th Utente
+        %th Descrizione
+        %th Scadenza
 
 #show_event_dialog{:style => "display:none"}
   #show_event
