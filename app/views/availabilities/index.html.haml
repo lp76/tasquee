@@ -5,7 +5,7 @@
   = button_link_to t(:absences), "#", :id => "show_absences"
 
 #holidays
-  %h1= t(:holidays)
+  %h2.ribbon.flag= t(:holidays)
 
   %table
     %tr
@@ -24,7 +24,7 @@
   %p= add_button_link_to t(:new_holiday), new_holiday_path
 
 #absences{:style => "display:none"}
-  %h1= t(:absences)
+  %h2.ribbon.flag= t(:absences)
 
   %table
     %tr

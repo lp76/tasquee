@@ -32,6 +32,8 @@ class Appointment < ActiveRecord::Base
   scope :afternoon, where(:period => 'Afternoon')
   scope :all_day, where(:period => 'All day')
 
+  default_scope :order => 'due'
+
   STATUS = %w[Confirmed Pending]
   PERIOD = %w[Morning Afternoon All\ day]
 

@@ -1,5 +1,7 @@
 - title "Tasquee::Home Page", false
 
+%h2.ribbon.flag Calendario
+
 #calendar
   %h2#week
     = link_to "<<", :week => (@date.beginning_of_month-1).strftime("%Y-%m-01")
@@ -12,6 +14,9 @@
     %br
     = @date.year
   = render 'calendar'
+
+#notice
+  %h2.ribbon.flag Task in scadenza
 
 #show_event_dialog{:style => "display:none"}
   #show_event
