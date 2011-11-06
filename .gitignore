@@ -11,3 +11,4 @@
 !.gitignore
 .DS_Store
 *.pid
+Vagrantfile
