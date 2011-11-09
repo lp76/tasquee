@@ -7,7 +7,7 @@ em { font-style: italic; }
 body {
   /*background-color: #587498;*/
   background-color: #7F9DB9;
-  font-family: Palatino, Georgia, Helvetica, sans-serif;
+  font-family: Palatino, Georgia, Helvetica, serif;
   font-size: 14px;
   margin: 0;
 }
@@ -239,7 +239,7 @@ th {
 
 #calendar td,
 #calendar th {
-  font-family: Palatino, Georgia, Helvetica, sans-serif;
+  font-family: Palatino, Georgia, Helvetica, serif;
   font-size: 12px;
   padding: 6px;
   border: 1px solid #999;
@@ -304,7 +304,7 @@ th {
 	margin-bottom: 3px;
 	margin-top: 3px;
 	width: 100px;
-	font-family: Palatino, Georgia, Helvetica, sans-serif;
+	font-family: Palatino, Georgia, Helvetica, serif;
 	color: #000;
 	font-size: 0.8em;
   text-align: left;
