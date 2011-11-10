@@ -44,7 +44,7 @@ h2.ribbon.simple:before
 	display: none;
 }
 
-h2.ribbon.flag:before
+h2.flag:before
 {
 	width: 0px;
 	left: auto;
