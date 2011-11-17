@@ -7,11 +7,12 @@
 #holidays
   %h2.ribbon.flag= t(:holidays)
 
-  %table
+  %table.bordered
     %tr
       %th= t(:user)
       %th= t(:start_date)
       %th= t(:end_date)
+      %th
     - for holiday in @holidays
       %tr
         %td= holiday.user.name
@@ -25,13 +26,14 @@
 
 #absences{:style => "display:none"}
   %h2.ribbon.flag= t(:absences)
-
-  %table
+  
+  %table.bordered
     %tr
       %th= t(:user)
       %th= t(:day)
       %th= t(:start_time)
       %th= t(:end_time)
+      %th
     - for absence in @absences
       %tr
         %td= absence.user.name

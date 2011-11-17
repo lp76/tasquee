@@ -1,15 +1,20 @@
 html, body, div, form, code, pre {
-  margin: 0; padding: 0; border: 0; vertical-align: baseline;
+  margin: 0; 
+  padding: 0; 
+	border: 0; 
+	vertical-align: baseline;
 }
 
-em { font-style: italic; }
+em { 
+	font-style: italic; 
+}
 
 body {
-  /*background-color: #587498;*/
   background-color: #7F9DB9;
   font-family: Palatino, Georgia, Helvetica, serif;
   font-size: 14px;
   margin: 0;
+	padding: 0;
 }
 
 a {
@@ -35,7 +40,7 @@ a img {
   margin: 10px auto 10px;
   background: white;
   padding: 20px 40px;
-  border: solid 1px black;
+  border: solid 1px #000;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -46,16 +51,16 @@ a img {
   margin: 10px auto;
   background: white;
   padding: 10px 40px;
-  border: solid 1px black;
+  border: solid 1px #000;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-#footer p {
+#footer > p {
   margin: 0;
   text-align: right;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 #header {
@@ -64,7 +69,7 @@ a img {
   margin: 0 auto;
   background: white;
   padding: 10px 40px;
-  border: solid 1px black;
+  border: solid 1px #000;
   margin-top: 10px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -83,31 +88,6 @@ a.iconic {
 #user_menu {
   float: right;
   text-align: right;
-}
-
-table {
-  margin: 0;
-  padding: 0;
-}
-
-table p {
-  margin: 0;
-  padding: 0;
-}
-
-
-table, th, tr, td {
-  border: solid 1px;
-  border-collapse: collapse;
-}
-
-th, tr, td {
-  padding: 4px;
-  font-size: 12px;
-}
-
-th {
-  background-color: #ddd;
 }
 
 #flash_notice,
@@ -171,59 +151,14 @@ th {
   left: 0;
   margin: auto;
   padding: 20px 20px;
-  border: solid 1px black;
+  border: solid 1px #000;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-#login_box h1 {
+#login_box > h1 {
   text-align: center;
-}
-
-/* ----- SimpleForm Styles ----- */
-
-.simple_form label {
-  float: left;
-  width: 100px;
-  text-align: right;
-  margin: 4px 10px;
-}
-
-.simple_form div.input {
-  margin-bottom: 10px;
-}
-
-.simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px;
-}
-
-.simple_form div.boolean label, .simple_form label.collection_radio {
-  float: none;
-  margin: 0;
-}
-
-.simple_form label.collection_radio {
-  margin-right: 10px;
-  margin-left: 2px;
-}
-
-.simple_form .error {
-  clear: left;
-  float: none;
-  font-size: 12px;
-  color: #D00;
-  padding-left: 0.5em;
-  vertical-align: top;
-}
-
-.simple_form .hint {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #555;
-  display: block;
-  font-style: italic;
 }
 
 #calendar {
@@ -232,18 +167,19 @@ th {
   padding: 20px 0;
 }
 
-#calendar table {
+#calendar > table {
   border-collapse: collapse;
   width: 100%;
 }
 
-#calendar td,
+#calendar td, 
 #calendar th {
-  font-family: Palatino, Georgia, Helvetica, serif;
   font-size: 12px;
   padding: 6px;
   border: 1px solid #999;
   width: 70px;
+  font-size: 12px;
+  line-height: 1.2em;
 }
 
 #calendar th {
@@ -257,8 +193,7 @@ th {
   color: #777;
   height: 80px;
   vertical-align: top;
-  font-size: 12px;
-  line-height: 1.2em;
+
 }
 
 #calendar #week {
@@ -366,27 +301,6 @@ h1, h2 {
   padding: 10px 10px;
 }
 
-.table_list {
-  border: solid 1px;
-  border-color: #000;
-  border-collapse: collapse;
-  margin: 10px 0;
-  width: 100%;
-}
-
-.table_list th {
-  border: solid 1px;
-  border-color: #000;
-  padding: 4px 8px;
-  padding-bottom: 4px;
-  text-align: center;
-}
-
-.table_list td {
-  border: solid 1px;
-  border-color: #000;
-  padding: 2px 8px;
-} 
 
 .active {
   border-color: #000;
@@ -410,7 +324,7 @@ h1, h2 {
 
 
 .label {
-  padding: 1px 3px 2px;
+  padding: 2px 3px 2px;
   background-color: #bfbfbf;
   font-size: 9.75px;
   font-weight: bold;
@@ -420,6 +334,7 @@ h1, h2 {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
 .label.important {
   background-color: #c43c35;
 }
@@ -427,15 +342,19 @@ h1, h2 {
 .label.active {
   background-color: #1F1AB2;
 }
+
 .label.pending {
   background-color: #f89406;
 }
+
 .label.confirmed {
   background-color: #46a546;
 }
+
 .label.completed {
   background-color: #46a546;
 }
+
 .label.notice {
   background-color: #62cffc;
 }

@@ -1,7 +1,4 @@
 /* DataTables style */
-#customers_table, #appointments_table {
-  width: 100%;
-}
 
 .dataTables_wrapper {
 	position: relative;
@@ -10,6 +7,7 @@
 	clear: both;
 	_height: 302px;
 	zoom: 1; /* Feeling sorry for IE */
+	font-size: 12px;
 }
 
 .dataTables_length {
@@ -36,8 +34,8 @@
 
 .top, .bottom {
 	padding: 15px;
-	background-color: #F5F5F5;
-	border: 1px solid #CCCCCC;
+	background-color: #E7F0FB;
+	border: 1px solid #CCC;
   min-height: 17px;
 }
 
@@ -121,7 +119,7 @@
 }
 
 .paging_full_numbers span.paginate_button {
-	background-color: #ddd;
+	background-color: #E7F0FB;
 }
 
 .paging_full_numbers span.paginate_button:hover {
