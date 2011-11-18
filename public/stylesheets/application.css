@@ -25,11 +25,29 @@ a img {
   border: none;
 }
 
+/*
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
+*/
+
+/* Micro Clearfix Hack */
+.clear:before,
+.clear:after {
+	content: "";
+	display: table;
+}
+.clear:after {
+	clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clear {
+    zoom:1;
+}
+/* End */
 
 .center {
   text-align: center;
