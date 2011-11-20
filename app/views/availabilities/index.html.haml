@@ -12,17 +12,27 @@
       %th= t(:user)
       %th= t(:start_date)
       %th= t(:end_date)
+      %th= t(:total_days)
       %th
     - for holiday in @holidays
       %tr
         %td= holiday.user.name
         %td= l holiday.start_date
         %td= l holiday.end_date
+        %td= date_range(holiday.start_date, holiday.end_date)
         %td
           = button_group do
             = edit_button_link_to t(:edit), edit_holiday_path(holiday)
             = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
   %p= add_button_link_to t(:new_holiday), new_holiday_path
+            
+#create_holiday
+  %h2= t(:new_holiday)
+  = simple_form_for @holiday, {:remote => true} do |f|
+    = f.association :user, :collection => @users_in_calendar
+    = f.input :start_date, :as => :string, :input_html => { :size => 10 }
+    = f.input :end_date, :as => :string, :input_html => { :size => 10 }
+    = f.button :submit
 
 #absences{:style => "display:none"}
   %h2.ribbon.flag= t(:absences)

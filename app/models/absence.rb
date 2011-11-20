@@ -17,4 +17,5 @@ class Absence < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user_id, :day, :start_time, :end_time
+  validates_datetime :end_time, :after => :start_time
 end
