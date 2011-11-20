@@ -34,8 +34,6 @@ GEM
     builder (2.1.2)
     css3buttons (0.9.5)
       actionpack (>= 3.0.0)
-    date_validator (0.6.2)
-      activemodel (>= 3.0.0, < 3.2.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.1.2)
@@ -100,7 +98,6 @@ DEPENDENCIES
   annotate
   bcrypt-ruby
   css3buttons
-  date_validator
   haml
   haml-rails
   jquery-rails
