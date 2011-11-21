@@ -10,17 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20111016130601) do
-=======
-ActiveRecord::Schema.define(:version => 20111011121301) do
->>>>>>> availability
+ActiveRecord::Schema.define(:version => 20111121062730) do
 
   create_table "absences", :force => true do |t|
     t.integer  "user_id"
     t.date     "day"
-    t.string   "start_time"
-    t.string   "end_time"
+    t.time     "start_time", :limit => 255
+    t.time     "end_time",   :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

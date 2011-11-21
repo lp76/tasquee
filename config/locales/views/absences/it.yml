@@ -1,2 +1,10 @@
 it:
-  new_absence: "Aggiungi permesso"
+  absences: Permessi
+  new_absence: Aggiungi permesso
+  edit_absence: Modifica permesso
+  successfully_created_absence: Permesso inserito correttamente
+  successfully_updated_absence: Permesso aggiornato correttamente
+  successfully_destroyed_absence: Permesso cancellato
+  day: Giorno
+  start_time: Dalle
+  end_time: Alle

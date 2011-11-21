@@ -25,14 +25,6 @@
             = edit_button_link_to t(:edit), edit_holiday_path(holiday)
             = negative_trash_button_link_to t(:destroy), holiday, :confirm => t(:are_you_sure), :method => :delete
   %p= add_button_link_to t(:new_holiday), new_holiday_path
-            
-#create_holiday
-  %h2= t(:new_holiday)
-  = simple_form_for @holiday, {:remote => true} do |f|
-    = f.association :user, :collection => @users_in_calendar
-    = f.input :start_date, :as => :string, :input_html => { :size => 10 }
-    = f.input :end_date, :as => :string, :input_html => { :size => 10 }
-    = f.button :submit
 
 #absences{:style => "display:none"}
   %h2.ribbon.flag= t(:absences)
@@ -47,9 +39,9 @@
     - for absence in @absences
       %tr
         %td= absence.user.name
-        %td= absence.day
-        %td= absence.start_time
-        %td= absence.end_time
+        %td= l absence.day
+        %td= l absence.start_time, :format => :calendar
+        %td= l absence.end_time, :format => :calendar
         %td
           = button_group do
             = edit_button_link_to t(:edit), edit_absence_path(absence)

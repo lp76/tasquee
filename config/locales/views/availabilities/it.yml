@@ -1,9 +1,3 @@
 it:
-    availability: Assenze
-    holidays: Ferie
-    absences: Permessi
-    start_date: Dal
-    end_date: Al
-    day: Giorno
-    start_time: Dalle
-    end_time: Alle
+  availability: Assenze
+  holidays: Ferie

@@ -12,5 +12,5 @@ it:
   validates_timeliness:
     error_value_formats:
       date: '%d-%m-%Y'
-      time: '%H:%M:%S'
+      time: '%H:%M'
       datetime: '%d-%m-%Y %H:%M:%S'

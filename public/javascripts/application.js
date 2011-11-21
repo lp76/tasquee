@@ -9,7 +9,14 @@ $(function() {
   $('#appointment_due').datepicker({dateFormat: 'dd-mm-yy'});
   $('#holiday_start_date').datepicker({dateFormat: 'dd-mm-yy'});
   $('#holiday_end_date').datepicker({dateFormat: 'dd-mm-yy'});
-
+	$('#absence_day').datepicker({dateFormat: 'dd-mm-yy'});
+	$('#absence_start_time').timepicker({
+		showPeriodLabels: false
+	});
+	$('#absence_end_time').timepicker({
+		showPeriodLabels: false
+	});
+	
   $('.delete_action').live('ajax:success', function() {
     $(this).closest('tr').fadeOut();
   });

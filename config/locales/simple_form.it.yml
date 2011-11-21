@@ -34,3 +34,8 @@ it:
         user: Utente
         start_date: Dal
         end_date: Al
+      absence:
+        user: Utente
+        day: Giorno
+        start_time: Dalle
+        end_time: Alle

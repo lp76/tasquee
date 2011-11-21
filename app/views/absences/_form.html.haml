@@ -1,0 +1,6 @@
+= simple_form_for @absence do |f|
+  = f.association :user, :collection => @users_in_calendar
+  = f.input :day, :as => :string, :input_html => { :size => 10 }
+  = f.input :start_time, :as => :string, :input_html => { :size => 10 }
+  = f.input :end_time, :as => :string, :input_html => { :size => 10 }
+  = f.button :submit

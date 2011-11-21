@@ -1,8 +1,10 @@
 it:
-    holiday_details: "Dettaglio Ferie"
-    new_holiday: "Aggiungi Ferie"
-    edit_holiday: "Modifica Ferie"
-    successfully_created_holiday: "Ferie inserite correttamente"
-    successfully_updated_holiday: "Ferie aggiornate correttamente"
-    successfully_destroyed_holiday: "Ferie cancellate correttamente"
-    total_days: "Totale giorni"
+  holiday_details: Dettaglio Ferie
+  new_holiday: Aggiungi Ferie
+  edit_holiday: Modifica Ferie
+  successfully_created_holiday: Ferie inserite correttamente
+  successfully_updated_holiday: Ferie aggiornate correttamente
+  successfully_destroyed_holiday: Ferie cancellate
+  start_date: Dal
+  end_date: Al
+  total_days: Totale giorni
