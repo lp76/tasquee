@@ -18,12 +18,34 @@ body {
 }
 
 a {
-  color: blue;
+  color: #000;
 }
 
 a img {
   border: none;
 }
+
+h1, h2 {
+	font-size: 1.4em;
+	font-weight: 700;
+	margin: 15px 0;
+	/*letter-spacing: 0.1em;*/
+	color: rgb(142,11,0);
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+/*
+h1, h2 {
+  color: #9e1700;
+  text-shadow: 1px 1px 1px white;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin: 15px 0;
+  padding: 10px 0;
+	text-rendering: optimizelegibility;
+}
+*/
 
 /*
 .clear {
@@ -304,21 +326,10 @@ a.iconic {
   width: 650px;
 }
 
-h1, h2 {
-  color: #9e1700;
-  text-shadow: 1px 1px 1px white;
-  font-size: 1.4em;
-  font-weight: 700;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  margin: 15px 0;
-  padding: 10px 0;
-}
-
 #create_event h2 {
   margin: 5px 20px;
   padding: 10px 10px;
 }
-
 
 .active {
   border-color: #000;
