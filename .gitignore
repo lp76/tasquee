@@ -1,6 +1,7 @@
 .bundle
 .rvmrc
 .redcar
+Gemfile.lock
 /db/*.sqlite3
 /config/database.yml
 /config/unicorn.rb
