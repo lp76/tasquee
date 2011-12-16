@@ -44,11 +44,16 @@ class Appointment < ActiveRecord::Base
   end
 
   def send_updated_notification
-    EventMailer.send_updated_appointment(self).deliver if self.changed? and !self.archived
+    if self.changed? and !is_archived
+      EventMailer.send_updated_appointment(self).deliver
+    end
   end
 
   def send_deleted_notification
     EventMailer.send_deleted_appointment(self).deliver
   end
 
+  def is_archived
+    archived
+  end
 end
