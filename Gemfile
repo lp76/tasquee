@@ -15,5 +15,5 @@ gem 'haml-rails'
 gem 'validates_timeliness', '~> 3.0.2'
 group :production do
   gem 'unicorn'
-  gem 'mysql2', "~> 0.2.7", :group => :production
+  gem 'mysql2', "~> 0.3", :group => :production
 end
