@@ -47,7 +47,7 @@ class Task < ActiveRecord::Base
   end
 
   def send_updated_notification
-    if self.changed?
+    if self.changed? and !self.archived
       EventMailer.send_updated_task(self).deliver
       notify_admins if self.status == 'Completed'
     end
