@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
   before_filter :login_required
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.not_archived
   end
 
   def show
@@ -12,6 +12,26 @@ class AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
     @users_in_calendar = User.in_calendar
+  end
+  
+  def archive
+    @appointment = Appointment.find(params[:id])
+    @appointment.archived = true
+    if @appointment.save
+      respond_to do |format|
+        format.html {redirect_to appointments_url, :notice => t(:successfully_archived_appointment)}
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html {render :action => 'index'}
+        format.js
+      end
+    end
+  end
+  
+  def archived
+    @appointments = Appointment.archived
   end
 
   def create

@@ -1,6 +1,16 @@
 Tasquee::Application.routes.draw do
-  resources :appointments
-  resources :tasks
+  resources :appointments do
+    member do
+      get :archive
+    end
+    get :archived, on: :collection
+  end
+  resources :tasks do
+    member do
+      get :archive
+    end
+    get :archived, on: :collection
+  end
   resources :customers
 
   match 'logout' => 'sessions#destroy', :as => :logout

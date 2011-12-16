@@ -14,7 +14,9 @@
     = render 'completed_tasks'
 
 = javascript_tag do
-  $('#show_all_tasks').badger('#{@tasks.count}');
+  $('#show_all_tasks').badger('#{Task.total_task}');
   $('#show_active_tasks').badger('#{Task.active.count}');
   $('#show_pending_tasks').badger('#{Task.pending.count}');
   $('#show_completed_tasks').badger('#{Task.completed.count}');
+  $('#show_archived_tasks').badger('#{Task.archived.count}');
+  

@@ -31,6 +31,8 @@ class Appointment < ActiveRecord::Base
   scope :morning, where(:period => 'Morning')
   scope :afternoon, where(:period => 'Afternoon')
   scope :all_day, where(:period => 'All day')
+  scope :archived, where(:archived => true)
+  scope :not_archived, where(:archived => false)
 
   default_scope :order => 'due'
 

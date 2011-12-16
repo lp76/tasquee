@@ -13,6 +13,9 @@ it:
   task_details: Dettagli Task
   new_task: Nuovo Task
   edit_task: Modifica Task
+  in_archive: Archivio
+  archived: Archiviato
   successfully_created_task: Task inserito correttamente.
   successfully_updated_task: Task modificato correttamente.
   successfully_destroyed_task: Task cancellato correttamente.
+  successfully_archived_task: Task archiviato.

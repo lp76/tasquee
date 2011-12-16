@@ -1,0 +1,27 @@
+- title "Tasquee::" + t(:tasks), false
+
+%h2.ribbon.flag.title= t :tasks
+
+#aarchived_tasks
+  %table.bordered
+    %tr
+      %th= t :user
+      %th= t :customer
+      %th= t :description
+      %th= t :due
+      %th= t :period
+      %th= t :priority
+      %th= t :status
+
+    - for task in @tasks do
+      %tr{:id => "#{task.id}", :class => 'archived'}
+        %td= task.user.name
+        %td= task.customer.name
+        %td= task.description
+        %td= l task.due
+        %td= t task.period
+        %td= t task.priority
+        %td.center
+          %span.label{:class => "archived"}= t(:archived)
+
+%p= button_link_to t(:back_to_list), tasks_path

@@ -26,7 +26,9 @@ class Task < ActiveRecord::Base
   after_update :send_updated_notification
   after_destroy :send_deleted_notification
 
-  scope :completed, where(:status => 'Completed')
+  scope :archived, where(:archived => true)
+  scope :not_archived, where(:archived => false)
+  scope :completed, where(:status => 'Completed').not_archived
   scope :active, where(:status => 'Active')
   scope :pending, where(:status => 'Pending')
   scope :by_date, lambda { |date| { :conditions => ['due = ?', date] } }
@@ -59,6 +61,14 @@ class Task < ActiveRecord::Base
     User.admins.each do |admin|
       EventMailer.send_to_admin(self, admin).deliver
     end
+  end
+  
+  def is_archived
+    archived
+  end
+  
+  def self.total_task
+    Task.not_archived.count
   end
 
 end

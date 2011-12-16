@@ -12,3 +12,4 @@ it:
   successfully_created_appointment: Appuntamento inserito correttamente.
   successfully_updated_appointment: Appuntamento modificato correttamente.
   successfully_destroyed_appointment: Appuntamento cancellato correttamente.
+  successfully_archived_appointment: Appuntamento archiviato.

@@ -1,16 +1,17 @@
 .simple_form label {
   float: left;
-  width: 100px;
+  width: 150px;
   text-align: right;
-  margin: 4px 10px;
+  margin: 2px 5px;
+	vertical-align: center;
 }
 
 .simple_form div.input {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px;
+  margin-left: 160px;
 }
 
 .simple_form input[type='text']:focus {
@@ -31,9 +32,9 @@
   clear: left;
   float: none;
   font-size: 12px;
-  color: #D00;
+  color: rgb(142,11,0);
   padding-left: 0.5em;
-  vertical-align: top;
+  vertical-align: center;
 }
 
 .simple_form .hint {

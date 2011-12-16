@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_filter :login_required
 
   def index
-    @tasks = Task.all
+    @tasks = Task.not_archived
   end
 
   def show
@@ -14,7 +14,27 @@ class TasksController < ApplicationController
     @task.priority = "Normal"
     @users_in_calendar = User.in_calendar
   end
-
+  
+  def archive
+    @task = Task.find(params[:id])
+    @task.archived = true
+    if @task.save
+      respond_to do |format|
+        format.html {redirect_to tasks_url, :notice => t(:successfully_archived_task)}
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html {render :action => 'index'}
+        format.js
+      end
+    end
+  end
+  
+  def archived
+    @tasks = Task.archived
+  end
+  
   def create
     @task = Task.new(params[:task])
     if @task.save

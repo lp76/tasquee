@@ -1,13 +1,15 @@
 - title "Tasquee::" + t(:tasks), false
 
-%h2.ribbon.flag.title= t :tasks
+%h2.ribbon.simple= t :tasks
 
 .task_filter
   = button_link_to t(:all_tasks), "#", :id => "show_all_tasks"
   = button_link_to t(:active), "#", :id => "show_active_tasks"
   = button_link_to t(:pending), "#", :id => "show_pending_tasks"
   = button_link_to t(:completed), "#", :id => "show_completed_tasks"
+  = log_button_link_to t(:in_archive), archived_tasks_path, :id => "show_archived_tasks"
 
 = render 'all_tasks'
 
-%p= calendar_button_link_to t(:new_task), new_task_path
+%p 
+  =calendar_button_link_to t(:new_task), new_task_path

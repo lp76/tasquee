@@ -3,6 +3,7 @@ it:
   show: Mostra
   edit: Modifica
   destroy: Cancella
+  archive: Archivia
   are_you_sure: Sei sicuro?
   view_all: Visualizza Tutti
   back_to_list: Indietro

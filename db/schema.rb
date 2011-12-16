@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111121062730) do
+ActiveRecord::Schema.define(:version => 20111124064939) do
 
   create_table "absences", :force => true do |t|
     t.integer  "user_id"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20111121062730) do
     t.string   "period"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "archived",    :default => false
   end
 
   add_index "tasks", ["customer_id"], :name => "index_tasks_on_customer_id"

@@ -1,6 +1,6 @@
 - title "Tasquee::" + t(:appointments), false
 
-%h2.ribbon.flag= t :appointments
+%h2.ribbon.simple= t :appointments
 
 %table.bordered{:id => "appointments_table"}
   %thead
@@ -14,18 +14,20 @@
       %th
   %tbody
     - for appointment in @appointments
-      %tr
+      %tr{:id => "#{appointment.id}"}
         %td= appointment.user.name
         %td= appointment.customer.name
         %td= l appointment.due
         %td= t appointment.period
-        %td= t appointment.description
+        %td= appointment.description
         %td.center
           %span.label{:class => "#{appointment.status.to_s.downcase}"}= t appointment.status
         %td.center
           = button_group do
-            = search_button_link_to t(:show), appointment
+            = search_button_link_to t(:archive), archive_appointment_path(appointment), :remote => :true
             = edit_button_link_to t(:edit), edit_appointment_path(appointment)
             = negative_trash_button_link_to t(:destroy), appointment, :confirm => t(:are_you_sure), :method => :delete
 
-%p= calendar_button_link_to t(:new_appointment), new_appointment_path
+%p 
+  = calendar_button_link_to t(:new_appointment), new_appointment_path 
+  = log_button_link_to t(:in_archive), archived_appointments_path, :id => "show_archived_appointments"
