@@ -1,6 +1,6 @@
 class AddArchivedToAppointment < ActiveRecord::Migration
   def self.up
-    add_column :appointments, :archived, :boolean, :default => false
+    add_column :appointments, :archived, :boolean, :default => 0
   end
 
   def self.down
