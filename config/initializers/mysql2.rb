@@ -1,0 +1,1 @@
+Mysql2::Client.default_query_options.merge!(:cast_booleans => false)
