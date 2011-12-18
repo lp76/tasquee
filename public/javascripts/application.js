@@ -55,9 +55,11 @@ $(function() {
     $('#absences').show();
   });
 
+	/*
   $('a.remote_link').live('mouseover', function() {
     $(this).click();
   });
+	*/
 
   $('#events_calendar > tbody > tr > td').dblclick(function(e) {
     var info = $(this).attr('id').trim().split('_');
